@@ -1,0 +1,83 @@
+<?php session_start();
+	include("../check_login.php");
+	include("../lib/config.inc.php");
+	include("../lib/database.php");
+	$month_thai = array("1"=>'มกราคม',"2"=>'กุมภาพันธ์',"3"=>'มีนาคม',"4"=>'เมษายน',"5"=>'พฤษภาคม',"6"=>'มิถุนายน',"7"=>'กรกฏาคม',"8"=>'สิงหาคม',"9"=>'กันยายน',"10"=>'ตุลาคม',"11"=>'พฤศจิกายน',"12"=>'ธันวาคม');
+?>
+<html>
+<head>
+<title></title>
+<?=$webSite['meta']; ?>
+<link href="../css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<?
+	include("../manu_bar.php");
+	connect();	
+	$sql = " SELECT ReportMonth.report_year, ReportMonth.report_month, ";
+	$sql.=" Temp01.sent_date, Temp01.sent_time ";
+	$sql.=" FROM ReportMonth  ";
+	$sql.=" LEFT JOIN (SELECT sent_year, sent_month, sent_date,sent_time, amccode ";
+	$sql.=" FROM SentReportHeader ";
+	$sql.=" WHERE amccode='".$temp_amccode."') AS Temp01 ";
+	$sql.=" ON Temp01.sent_year = ReportMonth.report_year ";
+	$sql.=" AND Temp01.sent_month = ReportMonth.report_month ";
+	$sql.=" ORDER BY ReportMonth.report_year DESC,  
+					CASE WHEN ReportMonth.report_month = '3' THEN 1
+							WHEN ReportMonth.report_month = '2' THEN 2
+							WHEN ReportMonth.report_month = '1' THEN 3
+							WHEN ReportMonth.report_month = '12' THEN 4
+							WHEN ReportMonth.report_month = '11' THEN 5
+							WHEN ReportMonth.report_month = '10' THEN 6
+							WHEN ReportMonth.report_month = '9' THEN 7
+							WHEN ReportMonth.report_month = '8' THEN 8
+							WHEN ReportMonth.report_month = '7' THEN 9
+							WHEN ReportMonth.report_month = '6' THEN 10
+							WHEN ReportMonth.report_month = '5' THEN 11
+							WHEN ReportMonth.report_month = '4' THEN 12
+							ELSE 99 END ASC	";
+
+?>
+<table  width="530" align="center" class="gridtable" style="margin-top:10px;">
+<tr height="25"><td colspan="5">
+<center>
+	<span style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../icons/report.png');" class="span_icon">
+	<img src="../icons/report.png" alt=" รายงานข้อมูล " class="images_icon" > 
+	</span>&nbsp;<font color="#0F7FAF"><b> รายงานการส่งข้อมูลประจำเดือน สกต.<?=$temp_name; ?></b></center></font>
+</td></tr>
+<tr class="rows_pink"> 
+	<td valign="middle" align="center" width="50"> ลำดับที่ </td>
+	<td valign="middle" align="center" width="80"> ปีบัญชี </td>
+	<td valign="middle" align="center" width="100"> เดือน </td>
+	<td valign="middle" align="center" width="150"> วันที่ส่ง </td>
+	<td valign="middle" align="center" width="150"> เวลาที่ส่ง </td>
+</tr>
+
+<? $result_report =  query($sql);
+	$i=0;
+	WHILE( $fetch_report = fetch_row($result_report))
+	{  $i++;
+		if(($i%2)==0)
+			echo "<tr class='rows_grey'>";
+		else
+			echo "<tr>";
+	?>
+		<td align="right"><?=$i; ?>&nbsp;</td>
+		<td align="center"><?=trim($fetch_report[0]) ?></td>
+		<td align="center"><?=$month_thai[trim($fetch_report[1])] ?></td>
+	<?  if(is_null($fetch_report[2])) { ?>
+			<td align="center" colspan="2"><font color='red'> ไม่มีการส่งข้อมูลให้ระบบ </font></td>
+	<?  }else{  ?>
+			<td align="center"><?=trim($fetch_report[2]); ?></td><td align="center"><?=trim($fetch_report[3]); ?></td>
+	<?  } // end if ?>		
+	</tr>
+<? }  // end while ?>
+</table>
+<?
+	free_result($result_report);
+	close(); ?>
+</body>
+</html>
+<?php
+	include("../footer.php");
+?>

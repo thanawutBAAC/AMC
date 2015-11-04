@@ -1,0 +1,1031 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0055)http://www.thaicreate.com/community/php-mysql-thai.html -->
+<HTML lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)</TITLE>
+<LINK rel="icon" href="http://www.thaicreate.com/upload/tutorial/tc.ico" type="image/x-icon">
+
+<LINK href="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/Style.css" rel="stylesheet" type="text/css">
+<LINK href="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/dhtmlXTabbar.css" rel="stylesheet" type="text/css">
+<LINK href="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shCore.css" type="text/css" rel="stylesheet">
+<LINK href="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shThemeDefault.css" type="text/css" rel="stylesheet">
+<META name="description" content="PHP &amp; MySQL (Thai) วิธีการแก้ปัญหาภาษาไทยใน PHP กับ MySQL ให้สามารถทำการเพิ่มข้อมูล และแสดงผลข้อมูลภาษาไทยได้อย่างถูกต้อง">
+<META name="verify-v1" content="HajSqMDuE7DEq16BQJOfEC+8lE7A2T+YY4/VqvimHwI=">
+<!--
+Developer By Weerachai N. (WIN) 
+Contact Us Email : is_php@hotmail.com, Tel : 08-1987-6107 (Update : 30 Jul 2008)
+CopyRight www.ThaiCreate.Com. All Rights Reserved.
+-->
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/dhtmlXCommon.js"></SCRIPT> 
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/dhtmlXTabbar.js"></SCRIPT> 
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/dhtmlXTabbarStart.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxLoadContent.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/jsValidate.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxLoad.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxUserOnline.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxScore.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxDownload.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxSearch.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxCmd.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajaxSendPM.js"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ZeroClipboard.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shCore.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shBrushPhp.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shBrushVb.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shBrushJScript.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shBrushSql.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/shBrushCSharp.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '/syntaxhighlight/scripts/clipboard.swf';
+    SyntaxHighlighter.all();
+</SCRIPT>
+
+<SCRIPT type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</SCRIPT><SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ga.js" type="text/javascript"></SCRIPT>
+		<SCRIPT type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-10173467-1");
+		pageTracker._trackPageview();
+		} catch(err) {}
+</SCRIPT>
+
+</HEAD><BODY topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0">
+
+<TABLE width="1004" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR>
+    <TD width="1226" height="26" colspan="3" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/bgheader.png"><DIV align="right">
+        <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+          <TBODY><TR>
+            <TD width="40%" valign="top" style="padding-left:10px"><SPAN class="headertitle">
+                            <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/latest.gif" width="18" height="9" alt="Register"> <SPAN class="headertitle" title="Register" onclick="window.location=&#39;/c.aspx?option=register&#39;" style="cursor: pointer;">Register</SPAN></SPAN> <SPAN class="headertitle"> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/latest.gif" width="18" height="9" alt="Member Login"> <SPAN class="headertitle" title="Member Login" style="cursor: pointer;" onclick="window.location=&#39;/c.aspx?option=login&#39;;">Member Login</SPAN> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/latest.gif" width="18" height="9" alt="Member Login"> <SPAN class="headertitle" title="Forgot Password" style="cursor: pointer;" onclick="window.location=&#39;/c.aspx?option=forget&#39;">Forgot Password ??</SPAN></SPAN>
+                          </TD>
+            <TD width="60%"><DIV align="right"><SPAN class="white"> <STRONG>PHP </STRONG> (Hypertext Preprocessor), <STRONG>ASP </STRONG> (Active Server Pages), <STRONG>ASP.NET, VB.NET, C# </STRONG> (.Net 1.1, 2.0, 3.5, 4.0)</SPAN></DIV></TD>
+          </TR>
+        </TBODY></TABLE>
+    </DIV></TD>
+  </TR>
+  <TR>
+    <TD height="137" colspan="3" valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xtcba_01.jpg" style="BACKGROUND-REPEAT: no-repeat;"><DIV align="right">
+        <TABLE width="100%" height="117" border="0" cellpadding="0" cellspacing="0">
+          <TBODY><TR>
+            <TD width="38%"><TABLE width="100%" border="0">
+                <TBODY><TR>
+                  <TD width="4%">&nbsp;</TD>
+                  <TD width="96%">&nbsp;</TD>
+                </TR>
+                <TR>
+                  <TD>&nbsp;</TD>
+                  <TD>&nbsp;</TD>
+                </TR>
+                <TR>
+                  <TD>&nbsp;</TD>
+                  <TD><SPAN class="bugregisterd">Registered :
+				  					   <A href="http://www.thaicreate.com/member-list/level/all/page-0001.html"><FONT color="ff6600">74,473</FONT></A>
+					                    </SPAN> </TD>
+                </TR>
+                <TR>
+                  <TD>&nbsp;</TD>
+                  <TD>&nbsp;</TD>
+                </TR>
+            </TBODY></TABLE></TD>
+            <TD width="62%" valign="top"> <DIV align="center">
+              <TABLE width="615" height="17" border="0" align="right" cellpadding="0" cellspacing="0">
+                <SCRIPT language="javascript">
+				function onClickSub()
+				{
+					var q = document.getElementById('q');
+					var s = document.getElementById('s');
+					q.value=s.value;
+					s.value = "";
+				}
+				</SCRIPT>
+                <FORM action="http://www.thaicreate.com/search" id="cse_search_box" onsubmit="return onClickSub();"></FORM>
+                  <TBODY><TR>
+
+                    <TD width="604" height="38" valign="top"><DIV align="right" style="padding-top:2px">
+                        <INPUT type="hidden" name="cx" value="partner-pub-0639452308651048:mgul3k-tjap">
+                        <INPUT type="hidden" name="cof" value="FORID:10">
+                        <INPUT type="hidden" name="ie" value="UTF-8">
+                        <INPUT type="hidden" name="q" id="q">
+                        <FIELDSET id="searchgoogle">
+                        
+                        <INPUT type="text" name="s" id="s" value="อยากหาอะไรพิมพ์ตรงนี้ได้เลยจ้า... ^-^" onclick="if(this.value==&#39;อยากหาอะไรพิมพ์ตรงนี้ได้เลยจ้า... ^-^&#39;){this.value=&#39;&#39;;}" onblur="if(this.value==&#39;&#39;){this.value=&#39;อยากหาอะไรพิมพ์ตรงนี้ได้เลยจ้า... ^-^&#39;;}">
+                        <INPUT name="submit" type="submit" class="submit" id="searchsubmit" title="Search" alt="Search" value="">
+                        </FIELDSET>
+                        <SCRIPT language="javascript">
+						function onClickSub()
+						{
+						var q = document.getElementById('q');
+						var s = document.getElementById('s');
+						q.value=s.value;
+						s.value = "";
+						}
+					
+						</SCRIPT>	
+                     
+                    </DIV></TD>
+                  </TR>
+                  <TR>
+                    <TD height="50" valign="bottom">
+					<SCRIPT language="javascript">
+					function ShowforumTitle(altID)
+					{
+						var altText = document.getElementById("altText");
+						if(altID==0)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>แสดงหน้าหลักของทุกกระทู้ แสดงรายการกระทู้ทุกหมวดหมู่ พร้อมทั้งรายการอัพเดดของกระทู้</font>";
+						}
+						else if(altID==1)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>หัวข้อฮิต กระทู้ภาษา PHP ครอบคลุม Version 3.0, 4.0 และ 5.0</font>";
+						}						
+						else if(altID==2)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้ภาษา ASP ในรูปแบบของ ASP Classic บน Version 3.0</font>";
+						}
+						else if(altID==3)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้ภาษา .NET ทุกประเภท ทั้ง VB.NET, C#, J# ครอบคุม Version 1.x, 2.x, 3.x และ 4.x</font>";
+						}	
+						else if(altID==6)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้ภาษา Script ทุกประเภท เช่น JavaScript, VBScript หรือ Action Script</font>";
+						}						
+						else if(altID==7)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้ภาษาอื่น ๆ ที่ไม่รู้จะไว้หมวดหมู่ไหน เช่น C++ , Pascal ,Cobal หรืออื่น ๆ  ไว้ที่นี่ได้เลย</font>";
+						}							
+						else if(altID==4)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้เกี่ยวกับกราฟฟิค การออกแบบ Photoshop , Illustrator และการออกแบบทุกประเภท</font>";
+						}								
+						else if(altID==5)
+						{
+						altText.innerHTML = "<font style='BACKGROUND-COLOR: #FFFFFF'>กระทู้พูดคุยทั่วไป พูดคุยได้ทุกเรื่อง ทั้งมีสาระ และไม่มีสาระ ของชาวไทยครีเอท</font>";
+						}							
+					}
+					
+					function RemoveforumTitle()
+					{
+						var altText = document.getElementById("altText");
+						altText.innerHTML = "";
+					}	
+					</SCRIPT>
+					
+					<DIV align="right" style="padding-top:5px">
+					<SPAN onmouseover="ShowforumTitle(0)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/topic/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/all.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(1)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/php/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/php.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(2)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/asp/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/asp.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(3)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/dotnet/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/dotnet.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(6)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/script/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/script.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(7)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/threads/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/others.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(4)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/graphic/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/design.png" width="48" height="48" border="0"></SPAN><SPAN onmouseover="ShowforumTitle(5)" onmouseout="RemoveforumTitle()" onclick="window.location=&#39;/community/forum.html&#39;;" style="cursor:pointer"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/freestyle.png" width="48" height="48" border="0"></SPAN></DIV>
+					<DIV align="right" class="sub_content" style="padding-right:8px;padding-bottom:8px"><DIV id="altText"></DIV></DIV>
+					
+					</TD>
+                  </TR>
+                
+              </TBODY></TABLE>
+                </DIV></TD>
+            <TD width="0%">&nbsp;</TD>
+          </TR>
+        </TBODY></TABLE>
+		
+		
+		
+        <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+          <TBODY><TR>
+            <TD style="padding-left: 42px;padding-top: 5px;">                <SPAN class="linkheader">
+                <A href="http://www.thaicreate.com/" title="HOME">HOME</A> &gt; <A href="http://www.thaicreate.com/community.html" title="Community Zone">Community Zone</A> &gt; <STRONG>แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)</STRONG>                 </SPAN>
+                            </TD>
+          </TR>
+        </TBODY></TABLE>
+		
+		
+    </DIV></TD>
+  </TR>
+</TBODY></TABLE>
+
+		<TABLE width="1004" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR> 
+    <TD width="1004" colspan="3" valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xtcba_02_2.jpg" style="BACKGROUND-REPEAT: no-repeat;"> <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                <TBODY><TR> 
+          <TD width="81%" valign="top"> 
+		  
+
+
+
+<TABLE width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+  <TBODY><TR> 
+    <TD><H1> 
+        แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)      </H1></TD>
+  </TR>
+  <TR>
+    <TD>&nbsp;</TD>
+  </TR>
+</TBODY></TABLE>
+<DIV align="center"> 
+  <TABLE width="740" border="0" cellpadding="0" cellspacing="0">
+    <TBODY><TR> 
+      <TD valign="top"> <DIV align="center"> 
+        </DIV>
+        <TABLE width="732" border="0" cellspacing="0" cellpadding="0">
+          <TBODY><TR> 
+            <TD width="2%">&nbsp;</TD>
+            <TD width="96%">                
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0639452308651048";
+google_language = 'en';
+/* 728x90, Forum 12/31/08 */
+google_ad_slot = "9838866415";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/show_ads.js">
+</SCRIPT><SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/expansion_embed.js"></SCRIPT><SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/test_domain.js"></SCRIPT><SCRIPT>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</SCRIPT><INS style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><INS id="google_ads_frame1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><IFRAME allowtransparency="true" frameborder="0" height="90" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" scrolling="no" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ads(3).htm" style="left:0;position:absolute;top:0" vspace="0" width="728"></IFRAME></INS></INS>
+			<BR>
+			<TABLE width="100%" border="0">
+              <TBODY><TR>
+                <TD><A href="JavaScript:void(0);" onclick="JavaScript:SendToFriend(&#39;แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)&#39;,&#39;/community/php-mysql-thai.html&#39;);"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sendtofriend.png" alt="Send To Friend." width="130" height="31" border="0" title="Send To Friend."></A><A href="JavaScript:void(0)" onclick="JavaScript:AjaxCmd(&#39;BOOKMARK&#39;,&#39;แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)&#39;,&#39;/community/php-mysql-thai.html&#39;,null)"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/bookmark.png" alt="Bookmark." width="130" height="31" border="0" title="Bookmark."></A>
+                    <INPUT name="copyclipboard" id="copyclipboard" type="image" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/clipboard.png" width="130" height="31" border="0">
+                </TD>
+              </TR>
+            </TBODY></TABLE>
+			<FONT class="detailTutorial">
+  ปัญหาภาษาไทย <STRONG>PHP กับ MySQL</STRONG> ??????????<BR>
+<BR>
+<BR>
+<STRONG>บทความ PHP &amp; MySQL</STRONG><BR>
+<DIV class="code"><FONT class="fontcode"><A href="http://www.thaicreate.com/php/php-mysql.html" target="blank">http://www.thaicreate.com/php/php-mysql.html</A></FONT></DIV><BR>
+<BR>
+เหตุผลที่ผมทำบทความนี้ขึ้นก็ก็เพราะมีกระทู้ถามเกี่ยวกับภาษาไทย ?????? ทุกวันครับ และเป็นปัญหาที่แก้ไม่จบซะทีสำหรับผู้ที่ กำลังเริ่มเขียน <STRONG>MySQL</STRONG> 4.1.x และ 5.0.x ขึ้นไป  เพราะในเวอร์ชั่นใหม่นี้ ทาง <STRONG>MySQL</STRONG> ได้ให้ความสำคัญกับ Charset  มากขึ้นกว่าเวอร์ชั่น เดิม ๆ  ก่อนหน้านี้ที่เรา ๆ ใช้ latin1 ในการเก็บข้อมูลที่เป็นภาษาไทยซึ่งจะมีปัญหาค่อนข้างบ่อยเกี่ยวกับการแสดงผลที่ผิดเพี้ยน การจัดเรียงที่ไม่ถูกต้อง และความจำกัดทางด้านรองรับหลาย ๆ ภาษา  ทั้งนี้ผมคิดว่าการนำ Chatset มาใช้ ทาง mySQL เองต้องการแก้ปัญหาที่เกี่ยวข้องกับภาษากับการใช้งาน Application อื่น ๆ ที่รองรับรูปแบบ <STRONG>UTF-8</STRONG> ไปหมดแล้ว คงจะเหลือแต่คนไทยส่วนมากที่ยังคงยึดตึดกับ <STRONG>TIS-620</STRONG> ถึงคราวที่เราจะต้องเปลี่ยนมาใช้ UTF-8 กันได้แล้วครับ และผมกล้ารับประกันเลยครับว่า มันดีกว่าเดิม จะช่วยลดปัญหาต่าง ๆ ที่เกี่ยวกับภาษาไทยได้อย่างหมดเกลี้ยง ครับ <BR>
+<BR>
+<BR>
+ถึงบทความนี้จะมีให้เลือกใช้ทั้ง <STRONG>TIS-620 และ UTF-8</STRONG> แต่ผมยังแนะนำให้เปลี่ยนให้เป็น <STRONG>UTF-8</STRONG> ให้หมดครับ<BR>
+<BR>
+<BR>
+<U><STRONG>1. การใช้ภาษาไทยกับ TIS-620</STRONG></U><BR>
+<BR>
+ในการใช้ <STRONG>Collation</STRONG> ของ <STRONG>TIS-620</STRONG> การสร้างตารางหรือแม้แต่ฟิวส์ให้ใช้เป็น <STRONG>tis620_thai_ci</STRONG> และในการ Import หรือ Export ข้อมูลก็จะต้องใช้เป็น <STRONG>tis620</STRONG> เช่นเดียวกันครับ ตามรูปตัวอย่างครับ<BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/tis620-1.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กำหนด Collation ของตาราง</STRONG><BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/tis620-2.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กำหนด Collation ของฟิวส์</STRONG><BR>
+<BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/tis620-4.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กรณีที่มีการ import หรือ Export ข้อมูลให้เลือกเป็น tis620</STRONG><BR>
+<BR>
+<BR>
+<STRONG>1.2</STRONG> กำหนด Header ให้ใช้เป็น tis-620 <BR>
+<DIV class="code"><FONT class="fontcode">&lt;meta http-equiv=Content-Type content="text/html; charset=tis-620"&gt;</FONT></DIV><BR>
+<BR>
+<BR>
+<STRONG>1.3</STRONG> กำหนดในส่วนของ Connection <BR>
+<DIV class="code"><FONT class="fontcode">- กรณีที่กำหนด Collation เป็น tis620_thai_ci ให้ใช้<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET NAMES TIS620");</STRONG><BR>
+<BR>
+- กรณีที่กำหนด Collation อื่น ๆ  ให้ใช้<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET character_set_results=tis620");<BR>
+	mysql_query("SET character_set_client=tis620");<BR>
+	mysql_query("SET character_set_connection=tis620");</STRONG></FONT></DIV><BR>
+<BR>
+<STRONG>ตัวอย่าง Code เต็ม ๆ ครับ</STRONG><BR>
+<DIV class="code"><FONT class="fontcode">&lt;html&gt;<BR>
+&lt;head&gt;<BR>
+&lt;title&gt;ThaiCreate.Com PHP &amp; TIS-620&lt;/title&gt;<BR>
+&lt;meta http-equiv=Content-Type content="text/html; charset=tis-620"&gt;<BR>
+&lt;/head&gt;<BR>
+&lt;body&gt;<BR>
+&lt;?	<BR>
+	/*** Connect ***/<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET NAMES TIS620");</STRONG><BR>
+	/*<BR>
+	// Or //<BR>
+	mysql_query("SET character_set_results=tis620");<BR>
+	mysql_query("SET character_set_client=tis620");<BR>
+	mysql_query("SET character_set_connection=tis620");<BR>
+	*/<BR>
+<BR>
+	/***  Add Record ***/<BR>
+	if($_GET["Action"]=="Save")<BR>
+	{<BR>
+		$strSQL = "INSERT INTO mydata_tis620 (NAME,SURNAME) VALUES ('".$_POST["txtName"]."','".$_POST["txtSurname"]."')";<BR>
+		mysql_query($strSQL);<BR>
+	}<BR>
+	<BR>
+	/*** List Record ***/<BR>
+	$strSQL = "SELECT * FROM mydata_tis620";<BR>
+	$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");<BR>
+?&gt;<BR>
+	&lt;table width="498" border="1"&gt;<BR>
+	&lt;tr&gt;<BR>
+	&lt;th width="87"&gt; &lt;div align="center"&gt;UID &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;th width="145"&gt; &lt;div align="center"&gt;NAME &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;th width="244"&gt; &lt;div align="center"&gt;SURNAME &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;/tr&gt;<BR>
+	&lt;?<BR>
+	while($objResult = mysql_fetch_array($objQuery))<BR>
+	{<BR>
+	?&gt;<BR>
+		&lt;tr&gt;<BR>
+		&lt;td&gt;&lt;div align="center"&gt;&lt;?=$objResult["UID"];?&gt;&lt;/div&gt;&lt;/td&gt;<BR>
+		&lt;td&gt;&lt;?=$objResult["NAME"];?&gt;&lt;/td&gt;<BR>
+		&lt;td&gt;&lt;?=$objResult["SURNAME"];?&gt;&lt;/td&gt;<BR>
+		&lt;/tr&gt;<BR>
+	&lt;?<BR>
+	}<BR>
+	?&gt;		<BR>
+	&lt;form name="frmMain" method="post" action="?Action=Save"&gt;<BR>
+		&lt;tr&gt;<BR>
+		  &lt;td&gt;<BR>
+	      &lt;/td&gt;<BR>
+		  &lt;td&gt;&lt;input name="txtName" type="text" id="txtName"&gt;&lt;/td&gt;<BR>
+		  &lt;td&gt;&lt;input name="txtSurname" type="text" id="txtSurname"&gt;<BR>
+	      &lt;input name="btnSubmit" type="submit" id="btnSubmit" value="Submit"&gt;&lt;/td&gt;<BR>
+	  &lt;/tr&gt;<BR>
+&lt;/form&gt;	  <BR>
+<BR>
+&lt;/table&gt;<BR>
+	&lt;?<BR>
+	mysql_close($objConnect);<BR>
+	?&gt;<BR>
+&lt;/body&gt;<BR>
+&lt;/html&gt; </FONT></DIV><BR>
+<BR>
+<U><STRONG>Output</STRONG></U><BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/tis620-3.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<BR>
+<HR><BR>
+<BR>
+<BR>
+<U><STRONG>2. การใช้ภาษาไทยกับ UTF-8</STRONG></U><BR>
+<BR>
+ในการใช้ <STRONG>Collation</STRONG> ของ <STRONG>UTF-8</STRONG> การสร้างตารางหรือแม้แต่ฟิวส์ให้ใช้เป็น <STRONG>utf8_unicode_ci</STRONG> และในการ Import หรือ Export ข้อมูลก็จะต้องใช้เป็น <STRONG>utf8</STRONG> เช่นเดียวกันครับ ตามรูปตัวอย่างครับ<BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/utf8-1.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กำหนด Collation ของตาราง</STRONG><BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/utf8-2.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กำหนด Collation ของฟิวส์</STRONG><BR>
+<BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/utf8-4.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<STRONG>กรณีที่มีการ import หรือ Export ข้อมูลให้เลือกเป็น utf8</STRONG><BR>
+<BR>
+<BR>
+<STRONG>2.2</STRONG> กำหนด Header ให้ใช้เป็น utf-8 <BR>
+<DIV class="code"><FONT class="fontcode">&lt;meta http-equiv=Content-Type content="text/html; charset=<STRONG>utf-8</STRONG>"&gt;</FONT></DIV><BR>
+<BR>
+<BR>
+<STRONG>2.3</STRONG> กำหนดในส่วนของ Connection <BR>
+<DIV class="code"><FONT class="fontcode">- กรณีที่กำหนด Collation เป็น utf8_unicode_ci ให้ใช้<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET NAMES UTF8");</STRONG><BR>
+<BR>
+- กรณีที่กำหนด Collation อื่น ๆ  ให้ใช้<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET character_set_results=utf8");<BR>
+	mysql_query("SET character_set_client=utf8");<BR>
+	mysql_query("SET character_set_connection=utf8");</STRONG></FONT></DIV><BR>
+<BR>
+<STRONG>ตัวอย่าง Code เต็ม ๆ ครับ</STRONG><BR>
+<DIV class="code"><FONT class="fontcode">&lt;html&gt;<BR>
+&lt;head&gt;<BR>
+&lt;title&gt;ThaiCreate.Com PHP &amp; UTF-8&lt;/title&gt;<BR>
+&lt;meta http-equiv=Content-Type content="text/html; charset=utf-8"&gt;<BR>
+&lt;/head&gt;<BR>
+&lt;body&gt;<BR>
+&lt;?	<BR>
+	/*** Connect ***/<BR>
+	$objConnect = mysql_connect("localhost","root","root") or die("Error Connect to Database");<BR>
+	$objDB = mysql_select_db("mydatabase");<BR>
+	<STRONG>mysql_query("SET NAMES UTF8");</STRONG><BR>
+	/*<BR>
+	// Or //<BR>
+	mysql_query("SET character_set_results=utf8");<BR>
+	mysql_query("SET character_set_client=utf8");<BR>
+	mysql_query("SET character_set_connection=utf8");<BR>
+	*/<BR>
+<BR>
+	/***  Add Record ***/<BR>
+	if($_GET["Action"]=="Save")<BR>
+	{<BR>
+		$strSQL = "INSERT INTO mydata_utf8 (NAME,SURNAME) VALUES ('".$_POST["txtName"]."','".$_POST["txtSurname"]."')";<BR>
+		mysql_query($strSQL);<BR>
+	}<BR>
+	<BR>
+	/*** List Record ***/<BR>
+	$strSQL = "SELECT * FROM mydata_utf8";<BR>
+	$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");<BR>
+?&gt;<BR>
+	&lt;table width="498" border="1"&gt;<BR>
+	&lt;tr&gt;<BR>
+	&lt;th width="87"&gt; &lt;div align="center"&gt;UID &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;th width="145"&gt; &lt;div align="center"&gt;NAME &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;th width="244"&gt; &lt;div align="center"&gt;SURNAME &lt;/div&gt;&lt;/th&gt;<BR>
+	&lt;/tr&gt;<BR>
+	&lt;?<BR>
+	while($objResult = mysql_fetch_array($objQuery))<BR>
+	{<BR>
+	?&gt;<BR>
+		&lt;tr&gt;<BR>
+		&lt;td&gt;&lt;div align="center"&gt;&lt;?=$objResult["UID"];?&gt;&lt;/div&gt;&lt;/td&gt;<BR>
+		&lt;td&gt;&lt;?=$objResult["NAME"];?&gt;&lt;/td&gt;<BR>
+		&lt;td&gt;&lt;?=$objResult["SURNAME"];?&gt;&lt;/td&gt;<BR>
+		&lt;/tr&gt;<BR>
+	&lt;?<BR>
+	}<BR>
+	?&gt;		<BR>
+	&lt;form name="frmMain" method="post" action="?Action=Save"&gt;<BR>
+		&lt;tr&gt;<BR>
+		  &lt;td&gt;<BR>
+	      &lt;/td&gt;<BR>
+		  &lt;td&gt;&lt;input name="txtName" type="text" id="txtName"&gt;&lt;/td&gt;<BR>
+		  &lt;td&gt;&lt;input name="txtSurname" type="text" id="txtSurname"&gt;<BR>
+	      &lt;input name="btnSubmit" type="submit" id="btnSubmit" value="Submit"&gt;&lt;/td&gt;<BR>
+	  &lt;/tr&gt;<BR>
+&lt;/form&gt;	  <BR>
+<BR>
+&lt;/table&gt;<BR>
+	&lt;?<BR>
+	mysql_close($objConnect);<BR>
+	?&gt;<BR>
+&lt;/body&gt;<BR>
+&lt;/html&gt; </FONT></DIV><BR>
+<BR>
+<U><STRONG>Output</STRONG></U><BR>
+<BR>
+<IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/utf8-3.jpg" alt="PHP MySQL (Thai)" title="PHP MySQL (Thai)" border="0"><BR>
+<BR>
+<BR>
+จะเห็นว่าสามารถรองรับใช้ภาษาไทยได้ทั้ง 2 รูปแบบ แต่ถึงอย่างไรแล้ว ผมอยากให้เปลี่ยนให้เป็น <STRONG>UTF-8</STRONG> ให้หมดครับ เพราะมันดีกว่าหลาย ๆ ด้านจริง ๆ ครับ สามารถดาวน์โหลด Code ได้จากข้างล่างน่ะครับ      
+		      </FONT>    
+                <BR>
+    
+                            <BR>			<BR><BR>
+<TABLE width="100%" border="0">
+                <TBODY><TR>
+
+                  <TD width="35%">  <SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0639452308651048";
+/* 234x60, Tutorials 1/6/09 */
+google_ad_slot = "7331695462";
+google_ad_width = 234;
+google_ad_height = 60;
+google_language = 'en';
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/show_ads.js">
+</SCRIPT><SCRIPT>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</SCRIPT><INS style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:234px"><INS id="google_ads_frame2_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:234px"><IFRAME allowtransparency="true" frameborder="0" height="60" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame" scrolling="no" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ads(1).htm" style="left:0;position:absolute;top:0" vspace="0" width="234"></IFRAME></INS></INS></TD>
+                  <TD width="65%">
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0639452308651048";
+/* 468x60, Tutorials 1/6/09 */
+google_ad_slot = "7699934392";
+google_ad_width = 468;
+google_ad_height = 60;
+google_language = 'en';
+//-->
+</SCRIPT>
+<SCRIPT type="text/javascript" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/show_ads.js">
+</SCRIPT><SCRIPT>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</SCRIPT><INS style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px"><INS id="google_ads_frame3_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px"><IFRAME allowtransparency="true" frameborder="0" height="60" hspace="0" id="google_ads_frame3" marginheight="0" marginwidth="0" name="google_ads_frame" scrolling="no" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ads(2).htm" style="left:0;position:absolute;top:0" vspace="0" width="468"></IFRAME></INS></INS>				  
+				  </TD>
+                </TR>
+              </TBODY></TABLE>
+
+</TD>
+            <TD width="2%">&nbsp;</TD>
+          </TR>
+        </TBODY></TABLE>
+
+
+          <BR>
+          <TABLE width="728" height="152" border="0" align="center">
+            <TBODY><TR>
+              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/screen-detail.jpg"><TABLE width="100%" border="0" cellpadding="2" cellspacing="2">
+                  <TBODY><TR>
+                    <TD colspan="3" height="5">
+                  </TR>
+                  <TR>
+                    <TD>&nbsp;</TD>
+                    <TD><STRONG>By : </STRONG></TD>
+                    <TD>
+mr.win					
+					</TD>
+                  </TR>
+                  <TR>
+                    <TD>&nbsp;</TD>
+                    <TD><STRONG>Score Rate : </STRONG></TD>
+                    <TD><STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"></STRONG></TD>
+                  </TR>
+                  <TR>
+                    <TD width="3%">&nbsp;</TD>
+                    <TD width="22%"><STRONG>Create Date : </STRONG></TD>
+                    <TD>2009-01-12 17:25:13</TD>
+                  </TR>
+                  <TR>
+                    <TD>&nbsp;</TD>
+                    <TD><STRONG>View : </STRONG></TD>
+                    <TD>
+                      51,023                    </TD>
+                  </TR>
+                  <TR>
+                    <TD>&nbsp;</TD>
+                    <TD><STRONG>Download : </STRONG></TD>
+                    <TD>
+                                            <A href="http://www.thaicreate.com/upload/community/20090112174655.zip" target="_blank"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/download.gif" alt="Download  แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)" width="16" height="16" border="0" align="absbottom"></A>
+                      (0.00 MB)                                          </TD>
+                  </TR>
+                  <TR>
+                    <TD>&nbsp;</TD>
+                    <TD>&nbsp;</TD>
+                    <TD>&nbsp;</TD>
+                  </TR>
+              </TBODY></TABLE></TD>
+            </TR>
+          </TBODY></TABLE>
+          <BR>
+          <TABLE width="718" height="21" border="0" align="center" cellpadding="0" cellspacing="0">
+            <TBODY><TR>
+              <TD><SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-0639452308651048";
+google_language = 'en';
+/* 728x15, Link 2/19/09 */
+google_ad_slot = "6447051561";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+          </SCRIPT>
+                  <SCRIPT type="text/javascript" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/show_ads.js">
+            </SCRIPT><SCRIPT>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</SCRIPT><INS style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><INS id="google_ads_frame4_anchor" style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><IFRAME allowtransparency="true" frameborder="0" height="15" hspace="0" id="google_ads_frame4" marginheight="0" marginwidth="0" name="google_ads_frame" scrolling="no" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ads.htm" style="left:0;position:absolute;top:0" vspace="0" width="728"></IFRAME></INS></INS></TD>
+            </TR>
+          </TBODY></TABLE>        
+        <BR>
+
+        <TABLE width="739" border="0" cellspacing="4" cellpadding="4">
+          <TBODY><TR>
+            <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/lineheader.gif" style="BACKGROUND-REPEAT: no-repeat;padding-left: 10px;padding-top: 8px;padding-bottom: 5px;"><STRONG>
+              Sponsored Links</STRONG></TD>
+          </TR>
+          <TR>
+            <TD valign="top"><TABLE width="100%" border="0" cellpadding="0" cellspacing="0">
+              <TBODY><TR>
+                <TD width="3%">&nbsp;</TD>
+                <TD width="48%"><A href="http://www.thaicreate.com/software/safari.html" target="blank"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/safari.jpg" alt="Download Safari" width="300" height="250" border="0"></A>
+
+<TABLE width="300" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><DIV align="right"><SPAN class="small"><STRONG> Ads Contact : 08-1987-6107 </STRONG></SPAN></DIV></TD>
+  </TR>
+</TBODY></TABLE>
+</TD>
+                <TD width="49%">						
+<A href="http://www.thaicreate.com/software/google-chrome.html" target="blank"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/chrome.png" alt="Download Google Chorme" width="300" height="250" border="0"></A>
+
+<TABLE width="300" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR>
+    <TD>&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><DIV align="right"><SPAN class="small"><STRONG> Ads Contact : 08-1987-6107 </STRONG></SPAN></DIV></TD>
+  </TR>
+</TBODY></TABLE>
+</TD>
+              </TR>
+            </TBODY></TABLE></TD>
+          </TR>
+        </TBODY></TABLE>     
+        <BR>
+        <TABLE width="739" border="0" cellspacing="4" cellpadding="4">
+          <TBODY><TR> 
+            <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/lineheader.gif" style="BACKGROUND-REPEAT: no-repeat;padding-left: 10px;padding-top: 8px;padding-bottom: 5px;"><STRONG> 
+              Related Links</STRONG></TD>
+          </TR>
+         
+          <TR> 
+            <TD valign="top">
+             
+<TABLE border="0" cellspacing="1" cellpadding="1"><TBODY><TR><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/app.gif" alt="PHP Class create table and search By DS_Ohm" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/clss-create-table-search-php.html" title="PHP Class create table and search By DS_Ohm" style="text-decoration:underline"><STRONG> 
+                    PHP Class create table and search By DS_Ohm                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">PHP Class create table and search By DS_Ohm</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2010-03-27 00:13:09                    <STRONG>View :</STRONG>
+                    1,287                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD><TD><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/app.gif" alt="jquery tree menu css slide-up-down By DS_Ohm" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/jquery-tree-menu-css-slide-up-down.html" title="jquery tree menu css slide-up-down By DS_Ohm" style="text-decoration:underline"><STRONG> 
+                    jquery tree menu css slide-up-down By DS_Ohm                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">jquery tree menu css slide-up-down By DS_Ohm</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2010-03-27 00:13:45                    <STRONG>View :</STRONG>
+                    3,796                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD></TR><TR><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/app.gif" alt="เริ่มต้นสร้าง PHP Lib กันดีกว่า 4" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/php-lib-dump-directory.html" title="เริ่มต้นสร้าง PHP Lib กันดีกว่า 4" style="text-decoration:underline"><STRONG> 
+                    เริ่มต้นสร้าง PHP Lib กันดีกว่า 4                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">มาเทไฟล์ใน folder กันเถอะ (php-4.3+)</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2009-06-09 03:31:26                    <STRONG>View :</STRONG>
+                    474                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD><TD><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/OnlineTutorials.gif" alt="Move Option List/ListMenu เทคนิคการทำเพิ่ม/ลบ/ย้าย Option Items ใน List Menu" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/javascript-move-option-list.html" title="Move Option List/ListMenu เทคนิคการทำเพิ่ม/ลบ/ย้าย Option Items ใน List Menu" style="text-decoration:underline"><STRONG> 
+                    Move Option List/ListMenu เทคนิคการทำเพิ่ม/ลบ/ย้าย Option Items ใน List Menu                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">การทำ Move Option  List เป็นเทคนิคการสร้าง Option ทางเลือกข้อมูล โดยสามารถทำการ Move Option ไปทางซ้ายหรือขวาได้ตามต้องการ</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2009-02-08 22:29:37                    <STRONG>View :</STRONG>
+                    3,530                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD></TR><TR><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/app.gif" alt="PHP Class create table By DS_Ohm" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/clss-create-table-php.html" title="PHP Class create table By DS_Ohm" style="text-decoration:underline"><STRONG> 
+                    PHP Class create table By DS_Ohm                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">PHP  Class create table By DS_Ohm</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2010-01-27 17:11:49                    <STRONG>View :</STRONG>
+                    879                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD><TD><TD valign="top">						<TABLE width="359" border="0" cellspacing="2" cellpadding="2">
+
+                <TBODY><TR> 
+                  <TD width="7%" valign="top"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/website.gif" alt="Checkbox Highlight Table Rows BackGround,bg Colors" width="32" height="32" border="0"></DIV></TD>
+                  <TD width="93%"><A href="http://www.thaicreate.com/community/checkbox-highlight-tr-bgcolor.html" title="Checkbox Highlight Table Rows BackGround,bg Colors" style="text-decoration:underline"><STRONG> 
+                    Checkbox Highlight Table Rows BackGround,bg Colors                    </STRONG></A> <BR> 
+                    <SPAN class="sub_content">JavaScript การทำคลิก Checkbox แล้ว Highlight  ในแถวของ Table ที่ได้ทำการคลิกเลือก หรือจะเลือกแบบ Check All ของแถวทั้งหมด</SPAN>
+                    <BR>
+                    <SPAN class="small"><STRONG>Rate : </STRONG><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/startrue.gif" width="10" height="9"> <STRONG><BR>
+                    Update : </STRONG>
+                    2009-11-02 21:51:02                    <STRONG>View :</STRONG>
+                    1,147                    </SPAN>                   </TD>
+                </TR>
+              </TBODY></TABLE>
+            </TD></TR></TBODY></TABLE>		    </TD>
+          </TR>
+        </TBODY></TABLE>
+        
+      </TD>
+    </TR>
+  </TBODY></TABLE>
+  <TABLE width="718" height="21" border="0" align="center" cellpadding="0" cellspacing="0">
+    <TBODY><TR>
+      <TD>
+      </TD>
+    </TR>
+  </TBODY></TABLE>
+</DIV>
+		  
+        </TD>
+          <TD width="19%" valign="top">              
+            <TABLE id="Table_01" width="186" height="430" border="0" cellpadding="0" cellspacing="0">
+                <TBODY><TR>
+                  <TD colspan="2"> <A href="http://www.thaicreate.com/topic/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/button_01.png" alt="ThaiCreate.Com Forum" title="ThaiCreate.Com Forum" width="186" height="51" border="0"></A></TD>
+                </TR>
+                <TR>
+                  <TD> <A href="http://www.thaicreate.com/php/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_01.png" alt="PHP Forum" title="PHP Forum" width="93" height="78" border="0"></A></TD>
+                  <TD> <A href="http://www.thaicreate.com/asp/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_02.png" alt="ASP Forum" title="ASP Forum" width="93" height="78" border="0"></A></TD>
+                </TR>
+                <TR>
+                  <TD> <A href="http://www.thaicreate.com/dotnet/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_03.png" alt=".NET Forum" title=".NET Forum" width="93" height="76" border="0"></A></TD>
+                  <TD> <A href="http://www.thaicreate.com/graphic/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_04.png" alt="Graphic Forum" title="Graphic Forum" width="93" height="76" border="0"></A></TD>
+                </TR>
+                <TR>
+                  <TD> <A href="http://www.thaicreate.com/community/forum.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_05.png" alt="Comunity Forum" title="Comunity Forum" width="93" height="77" border="0"></A></TD>
+                  <TD> <A href="http://www.thaicreate.com/free-web-script.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_06.png" alt="Free Web Script" width="93" height="77" border="0"></A></TD>
+                </TR>
+                <TR>
+                  <TD> <A href="http://www.thaicreate.com/freelance.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_07.png" alt="Jobs Freelance" title="Jobs Freelance" width="93" height="73" border="0"></A></TD>
+                  <TD> <A href="http://www.thaicreate.com/free-upload-files.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_08.png" alt="Free Uploads" title="Free Uploads" width="93" height="73" border="0"></A></TD>
+                </TR>
+                <TR>
+                  <TD> <A href="http://www.thaicreate.com/free-web-hosting.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_09.png" alt="Free Web Hosting" title="Free Web Hosting" width="93" height="77" border="0"></A></TD>
+                  <TD> <A href="http://www.thaicreate.com/software.html"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/xbutton_10.png" alt="Free Tools" title="Free Tools" width="93" height="77" border="0"></A></TD>
+                </TR>
+            </TBODY></TABLE>
+              <TABLE id="Table_01" width="186" height="381" border="0" cellpadding="0" cellspacing="0">
+                <TBODY><TR>
+                  <TD>				    <DIV align="center">
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+                   
+                    <A href="http://www.thaicreate.com/dotnet/dotnet-smartdevice-smartphone-pocket-pc-windows-ce.html" title=".NET Smart Device (VB.NET,C#)" target="_blank" alt=".NET Smart Device (VB.NET,C#)"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/smartdevice.jpg" alt=".NET Smart Device (VB.NET,C#)" title=".NET Smart Device (VB.NET,C#)" width="174" height="42" border="0"></A> <A href="http://www.thaicreate.com/dotnet/dotnet-console-application.html" title=".NET Console Application (VB.NET,C#)" target="_blank" alt=".NET Console Application (VB.NET,C#)"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/consoleapp.jpg" alt=".NET Console Application (VB.NET,C#)" title=".NET Console Application (VB.NET,C#)" width="174" height="42" border="0"></A> <A href="http://www.thaicreate.com/dotnet/dotnet-windows-form-application-winapp.html" title=".NET Windows Form Application , Windows App (VB.NET,C#)" target="_blank" alt=".NET Windows Form Application , Windows App (VB.NET,C#)"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/windowsapp.jpg" alt=".NET Windows Form Application , Windows App (VB.NET,C#)" title=".NET Windows Form Application , Windows App (VB.NET,C#)" width="174" height="42" border="0"></A> <BR>
+                    <TABLE width="178" height="172" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+                      <TBODY><TR>
+                        <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_01.jpg" width="6" height="36" alt=""></TD>
+                        <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_02.jpg"><DIV align="center" style="padding-top:7px"><STRONG>Free Tutorial </STRONG> </DIV></TD>
+                        <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_03.jpg" width="6" height="36" alt=""></TD>
+                      </TR>
+                      <TR>
+                        <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04_1.jpg"> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg" width="6" height="125" alt=""></TD>
+                        <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"><TABLE width="100%" border="0" cellspacing="1" cellpadding="1">
+                            <TBODY><TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/ajax.gif" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/ajax.html" title="Ajax Tutorials"><STRONG>Ajax Tutorials</STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD width="13%"><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sql.gif" width="16" height="16"></DIV></TD>
+                              <TD width="87%"><A href="http://www.thaicreate.com/tutorial/sql.html" title="SQL Tutorials"><STRONG>SQL Tutorials</STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sql.gif" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/asp/asp-sql-command.html" title="SQL Tutorials"><STRONG>SQL Tutorials (Part 2) </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/js.jpg" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/javascript.html" title="JavaScript Tutorials"><STRONG>JavaScript</STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/js2.jpg" width="14" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/javascript-validation.html" title="JavaScript &amp; Validation"><STRONG>JavaScript &amp; Validation </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/vb.jpg" width="14" height="15"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/vbscript.html" title="VBScript Tutorials"><STRONG>VBScript</STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="right"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/vbscript.gif" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/vbscript-validation.html" title="VBScript&amp; Validation"><STRONG>VBScript &amp; Validation </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/access.jpg" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/ms-access.html" title="Microsoft Access Tutorials"><STRONG>Microsoft Access</STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/mysql.jpg" width="16" height="10"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/mysql.html" title="MySQL  Tutorials"><STRONG>MySQL Tutorials </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sqlserver.jpg" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/sqlserver.html" title="SQL Server  Tutorials"><STRONG>SQL Server Tutorials </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sqlserver.jpg" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/sqlserver-2005.html" title="SQL Server 2005  Tutorials"><STRONG>SQL Server 2005 </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/sqlserver.jpg" width="16" height="16"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/sqlserver-2008.html" title="SQL Server 2008  Tutorials"><STRONG>SQL Server 2008 </STRONG></A></TD>
+                            </TR>
+                            <TR>
+                              <TD><DIV align="center"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/oci.jpg" width="15" height="15"></DIV></TD>
+                              <TD><A href="http://www.thaicreate.com/tutorial/oracle.html" title="Oracle Server Tutorials"><STRONG>Oracle Server Tutorials </STRONG></A></TD>
+                            </TR>
+                          </TBODY></TABLE>
+                            <BR></TD>
+                        <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06_1.jpg"> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg" width="6" height="125" alt=""></TD>
+                      </TR>
+                      <TR>
+                        <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_07.jpg" width="6" height="11" alt=""></TD>
+                        <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_08.jpg" width="166" height="11" alt=""></TD>
+                        <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_09.jpg" width="6" height="11" alt=""></TD>
+                      </TR>
+                    </TBODY></TABLE>
+                    <DIV align="center">                    <BR>
+
+					  <TABLE width="178" height="60" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+                        <TBODY><TR>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_01.jpg" width="6" height="36" alt=""></TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_02.jpg"><DIV align="center" style="padding-top:7px"><STRONG>
+                              สุดยอด Source Code V2.0</STRONG> </DIV></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_03.jpg" width="6" height="36" alt=""></TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp; </TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"> <DIV align="center"><STRONG><A href="http://www.thaicreate.com/source-code2.0.html" title="CD Source Code 2.0" alt="CD Source Code 2.0"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/cd2.png" width="160" height="167" border="0"></A> </STRONG><BR>
+						  <STRONG><SPAN style="cursor: pointer;" onclick="window.location=&#39;/payment.html&#39;">แจ้งชำระเงิน/โอนเงิน</SPAN></STRONG>
+                          </DIV></TD><TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp; </TD>
+                        </TR>
+                        <TR>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_07.jpg" width="6" height="11" alt=""></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_08.jpg" width="166" height="11" alt=""></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_09.jpg" width="6" height="11" alt=""></TD>
+                        </TR>
+                      </TBODY></TABLE>
+		              <BR>
+					  <!--
+	                <img src="http://www.older.thaicreate.com/images/banner.jpg" width="170" height="330" border="0" rel="nofollow"><br>
+		              <br>
+					  -->
+		              <TABLE width="178" height="60" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+                        <TBODY><TR>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_01.jpg" width="6" height="36" alt=""></TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_02.jpg"><DIV align="center" style="padding-top:7px"><STRONG>Sponsor Network </STRONG></DIV></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_03.jpg" width="6" height="36" alt=""></TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD rowspan="9" valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+						
+						  <TABLE width="165" border="0" align="center" cellpadding="0" cellspacing="2" id="Table_01">
+						    <TBODY><TR>
+                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+                                <DIV align="center"> <FONT class="lnkref"><A href="http://www.jobbangkok.com/" title="หางาน" target="_blank">หางาน</A></FONT> </DIV></TD>
+					        </TR>
+                            <TR>
+                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+                                <DIV align="center"> <FONT class="lnkref"><A href="http://www.seo-ch.jp/" title="SEO 検索エンジン対策" target="_blank">SEO 検索エンジン対策</A></FONT>
+                                </DIV></TD>
+                            </TR>
+                            <TR>
+                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"><DIV align="center"><FONT class="lnkref"><A href="http://www.baansamurai.com/" target="_blank" title="golf bangkok Baan Samurai online shop">golf bangkok Baan Samurai online shop</A></FONT></DIV></TD>
+                            </TR>
+	                            <TR>
+                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+                                <DIV align="center"> <FONT class="lnkref"><A href="http://www.thaicreate.com/free-web-hosting.html" title="Free Web Hosting" target="_blank">Free Web Hosting</A></FONT>
+                                </DIV></TD>
+                            </TR>
+							
+  	                            <TR>
+                                  <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+                                    <DIV align="center"> <FONT class="lnkref"><A href="http://www.thaicreate.com/asp.net/asp.net-install-dot-net-framework3.5.html" title="Download .NET Framework 3.5" target="_blank">Download .NET Framework 3.5 </A></FONT></DIV></TD>
+                            </TR>
+  	                            <TR>
+                                  <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;">
+                                    <DIV align="center"><FONT class="lnkref"><A href="http://www.skyrent.jp/" target="_blank">沖縄 レンタカー </A></FONT></DIV></TD>
+                            </TR>
+  	                            <TR>
+  	                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"><DIV align="center"><FONT class="lnkref"><A href="http://www.babytown.jp/" target="_blank">赤ちゃん・出産</A></FONT></DIV></TD>
+                            </TR>
+  	                            <TR>
+  	                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"><DIV align="center"><FONT class="lnkref"><A href="http://www.n-act.co.jp/" target="_blank">コラーゲン</A></FONT></DIV></TD>
+                            </TR>
+  	                            <TR>
+  	                              <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_05.jpg" style="BACKGROUND-REPEAT: no-repeat;"><DIV align="center"><FONT class="lnkref"><A href="http://www.ed-info.net/" target="_blank">バイアグラならED-info.net</A></FONT></DIV></TD>
+                            </TR>
+							</TBODY></TABLE></TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp;</TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp;</TD>
+                        </TR>
+                        <TR>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_04.jpg">&nbsp; </TD>
+                          <TD valign="top" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_06.jpg">&nbsp; </TD>
+                        </TR>
+                        <TR>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_07.jpg" width="6" height="11" alt=""></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_08.jpg" width="166" height="11" alt=""></TD>
+                          <TD> <IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/imgBlock_09.jpg" width="6" height="11" alt=""></TD>
+                        </TR>
+                      </TBODY></TABLE>
+		              <BR>
+	                                  </DIV></DIV></TD>
+                </TR>
+              </TBODY></TABLE>        
+            <DIV align="center"><STRONG>
+              
+                <BR>
+      
+                             
+ <BR>
+		 <BR>
+		            </STRONG></DIV><STRONG></STRONG></TD>
+        </TR>
+				        <TR>
+          <TD colspan="2" valign="top">&nbsp;</TD>
+        </TR>
+		        <TR>
+          <TD colspan="2" valign="top"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/spacer.gif" width="100" height="7"></TD>
+        </TR>
+      </TBODY></TABLE>
+      
+    </TD>
+  </TR>
+</TBODY></TABLE>
+<TABLE width="1004" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR>
+    <TD width="33102" height="58" colspan="3"><TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TBODY><TR>
+          <TD height="65" background="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/background_slice.png"><DIV align="center"><SPAN class="footer"> </SPAN> <SPAN class="footer"> <BR>
+            <!--BEGIN WEB STAT CODE---->
+					<SCRIPT language="javascript1.1" src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/f0010575.js"></SCRIPT><SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/th_donate_1.8.js"></SCRIPT><SCRIPT src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/th_common_1.4.js"></SCRIPT><A href="http://truehits.net/stat.php?login=thaicreate.com" target="_blank"><IMG src="./แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)_files/goggen.php" width="14" height="17" alt="Thailand Web Stat" border="0"></A>
+                    <!-- END WEBSTAT CODE -->
+ © www.ThaiCreate.Com. 2003-2009 All Rights Reserved. Link : <A href="http://www.thaigoodweb.com/" title="Free Template Vector Icon Script Flash PNG AI" target="_blank">ไทยกู๊ดเว็บ</A> , <A href="http://www.thaigascar.com/" title="ติดแก๊ส" target="_blank">ติดแก๊ส</A> , <A href="http://www.vhostweb.com/" title="Hosting" target="_blank">Hosting</A><BR>
+              Comments &amp; Suggestions Please Contact Us : thaicreate at hotmail dot com [<SPAN style="cursor: pointer;" onclick="window.location=&#39;/member-level.html&#39;">Conditions Privacy Statement</SPAN>]
+              <STRONG>ติดต่อโฆษณา</STRONG> 01-987-6107 <STRONG><U>อัตราราคา</U> <SPAN onclick="window.location=&#39;/ad.html&#39;" style="cursor: pointer;">คลิกที่นี่</SPAN></STRONG>              <BR>
+              <BR>              
+              <DIV style="padding-top:2px"></DIV>
+                           <FONT class="lnkref"><STRONG>Useful Links </STRONG> : <A href="http://www.tekiyaku.net/" target="_blank">翻訳会社TEKIYAKU</A> | <A href="http://www.visit-first.com/japan_guide/hotels/" target="_blank">hotel tokyo|Visit First</A> | <A href="http://www.visit-first.com/japan_guide/" target="_blank">japan guide|Visit First</A> | <A href="http://www.visit-first.jp/thai_guide/" target="_blank">バンコク(タイ)情報ならVisit First</A> | <A href="http://www.dominos.jp/" target="_blank">宅配ピザのDomino</A> | <A href="http://www.goo-net.com/index.html" target="_blank">中古車のプロトコーポレーション</A><BR>
+              <A href="http://kaitorimasu.jp/" target="_blank">ブランド買取</A> | <A href="http://kaitori-dia.jp/" target="_blank">ダイヤモンド買取</A> | <A href="http://www.kashi-jimusho.com/" target="_blank">貸事務所｜SANESU</A> | <A href="http://www.ntt.com/ict/" target="_blank">ICTソリューション</A> | <A href="http://www.thaicreate.com/sponsor.html" target="_blank"></A><A href="http://www.gpoint.co.jp/" target="_blank">ポイント交換ならGポイント</A> | <A href="http://www.thaicreate.com/sponsor.html" target="_blank"></A><A href="http://www.thaicreate.com/sponsor.html" target="_blank">当広告について</A>
+            </FONT>
+			               <BR>
+              <BR>
+          </SPAN></DIV></TD>
+        </TR>
+    </TBODY></TABLE></TD>
+  </TR>
+</TBODY></TABLE>
+<INPUT type="hidden" size="100" name="box-content-clipboard" id="box-content-clipboard" value="[b][u]Go to[/u] : [url=http://www.thaicreate.com/community/php-mysql-thai.html]แก้ปัญหาภาษาไทย php กับ MySQL (TIS-620 กับ UTF-8)[/url][/b]">
+
+	<SCRIPT type="text/javascript"> 
+		//set path
+		ZeroClipboard.setMoviePath('/js/ZeroClipboard.swf');
+		//create client
+		var clip = new ZeroClipboard.Client();
+		//event
+		clip.addEventListener('mousedown',function() {
+			clip.setText(document.getElementById('box-content-clipboard').value);
+		});
+		clip.addEventListener('complete',function(client,text) {
+			alert('Copied: Done!');
+		});
+		//glue it to the button
+		var copyclipboard = document.getElementById('copyclipboard');
+		if(copyclipboard != null)
+		{
+		clip.glue('copyclipboard');
+		}
+
+		function alertNews()
+		{
+
+		}
+	</SCRIPT><DIV style="position: absolute; left: 304px; top: 293px; width: 130px; height: 31px; z-index: 99; "><EMBED id="ZeroClipboardMovie_1" src="/js/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="130" height="31" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=130&amp;height=31" wmode="transparent"></DIV> 
+
+
+</BODY></HTML>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0060)http://board.thaiware.com/lofiversion/index.php/t322610.html -->
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>ThAiWaRe CoMMuNiTY > PHP connect Database SQLServer 2005 Express</TITLE>
+<META http-equiv=content-type content="text/html; charset=tis-620">
+<META content=index,follow name=robots><LINK rev=stylesheet media=screen 
+href="ThAiWaRe CoMMuNiTY  PHP connect Database SQLServer 2005 Express_files/lofiscreen.css" 
+rel=stylesheet><LINK rev=stylesheet media=handheld 
+href="ThAiWaRe CoMMuNiTY  PHP connect Database SQLServer 2005 Express_files/lofihandheld.css" 
+rel=stylesheet><LINK rev=stylesheet media=print 
+href="ThAiWaRe CoMMuNiTY  PHP connect Database SQLServer 2005 Express_files/lofiprint.css" 
+rel=stylesheet>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=ipbwrapper>
+<DIV class=ipbnavsmall><A 
+href="http://community.thaiware.com/thai/index.php?act=Help">ช่วยเหลือ</A> - <A 
+href="http://community.thaiware.com/thai/index.php?act=Search">ค้นหา</A> - <A 
+href="http://community.thaiware.com/thai/index.php?act=Members">รายชื่อสมาชิก</A> 
+- <A href="http://community.thaiware.com/thai/index.php?act=calendar">ปฏิทิน</A> 
+</DIV>
+<DIV id=largetext>เวอร์ชั่นเต็ม: <A 
+href="http://community.thaiware.com/thai/index.php?showtopic=322610">PHP connect 
+Database SQLServer 2005 Express</A></DIV>
+<DIV class=ipbnav><A 
+href="http://board.thaiware.com/lofiversion/index.php/">ThAiWaRe CoMMuNiTY</A> 
+&gt; <A 
+href="http://board.thaiware.com/lofiversion/index.php/f62.html">Programming 
+&amp; Knowledge</A> &gt; <A 
+href="http://board.thaiware.com/lofiversion/index.php/f4.html">CGi, PHP, ASP, 
+ASP.NET, JSP</A></DIV>
+<DIV id=ipbcontent>
+<DIV class=postwrapper>
+<DIV class=posttopbar>
+<DIV class=postname>Auuuuu</DIV>
+<DIV class=postdate>Sep 6 2007, 04:12 AM</DIV></DIV>
+<DIV class=postcontent>ผมจะใช้PHP 5 Run บน Apache 2.2 แล้วคราวนี้จะใช้ Database 
+SQLServer 2005 Express( ใช้ user : Window Authentication) 
+ทุกอย่างติดตั้งภายในเครื่องของผมเองครับ ครับ <BR>ผมจะ connect มันได้ยังไงครับ 
+<BR><BR>ถ้าผมใช้ mssql_connect <BR>1. ต้องทำอย่างไรบ้างครับ ?(อ่านมาหลายเว็บแล้ว 
+งงมาก ช่วยบอกเป็นลำดับทีนะคับ)<BR>2. จะใช้ Servername ว่าอะไรครับ?<BR>3 Username 
+Password ที่ให้ในการ connect จะใช้อะไรครับ? (Window 
+Authentication)<BR><BR>ช่วยคอบผมทีนะครับ ด่วนมากครับ<BR><BR>ที่ ผมทำครับ 
+<BR>$myServer = "localhost";<BR>$myUser = "";<BR>$myPass = "";<BR>$myDB = 
+"Decision"; <BR><BR>$dbhandle = mssql_connect($myServer, $myUser, $myPass) or 
+trigger_error(mssql_get_last_message(),E_USER_ERROR); <BR>$selected = 
+mssql_select_db($myDB, $dbhandle)or die("Couldn't open database $myDB"); 
+<BR><BR>ทำตามวิธีแบบนี้หมดแล้วครับไม่ได้เลย<BR><BR>เปิด file php.ini แล้ว 
+เอาเครื่องหมาย ";" หน้า <BR>;extension=php_mssql.dll ออก กลายเป็น 
+<BR>extension=php_mssql.dll <BR>ตรวจดู ไฟล์ ntwdblib.dll ว่า มีอยู่ใน foder ของ 
+php แล้วหรือไม่ ถ้ายังไม่มีก็ copy จาก แผ่น mssql มาได้ <BR><BR>มันฟ้อง error 
+แบบนี้ครับ<BR>Warning: mssql_connect() [function.mssql-connect]: Unable to 
+connect to server: localhost <BR><BR>ช่วยทีนะครับ ด่วนครับ<BR></DIV></DIV>
+<DIV class=postwrapper>
+<DIV class=posttopbar>
+<DIV class=postname>ManitSoft</DIV>
+<DIV class=postdate>Sep 6 2007, 09:17 AM</DIV></DIV>
+<DIV class=postcontent>ยังไม่ได้ตั้งค่า ให้กับ SQL SERVER มั้งครับพวก Enable 
+TCP/IP ลองเปิด SQL Server Browser มาตั้งค่าดู<BR>ตอนนี้ผมก็ไม่มีลองนะ 
+เลยนั่งเทียนบอกเอา<BR>-------------------------------------<BR>ลองค้นมาให้ 
+ได้มาตามนี้<BR>1) "Update" the ntwdblib.dll 2000.80.194.0.<BR><BR>2) Sql Server 
+must allow mix mode conecction.<BR><BR>3) mssql_connect ('(local)\SQLEXPRESS', 
+'sa', 'pass'); หรือ mssql_connect ('localhost,1433', 'sa', 
+'pass');<BR><BR>ลองทดสอบดูนะครับ </DIV></DIV>
+<DIV class=postwrapper>
+<DIV class=posttopbar>
+<DIV class=postname>PlaKriM</DIV>
+<DIV class=postdate>Sep 7 2007, 03:15 PM</DIV></DIV>
+<DIV class=postcontent>mssql_connect ('computer_name', 'sa', 'pass'); 
+<BR>mssql_connect ('computer_ip', 'sa', 'pass');<BR><BR>ลองใช้สองอันนี้ครับ 
+</DIV></DIV></DIV>
+<DIV class=smalltext>หน้านี้เป็นเวอร์ชั่นตัดภาพกราฟิกของเนื้อหาทั้งหมด 
+หากต้องการดูเวอร์ชั่นเต็มที่มีข้อมูลครบถ้วนพร้อมการจัดรูปแบบและภาพ กรุณา <A 
+href="http://community.thaiware.com/thai/index.php?showtopic=322610">คลิกที่นี่</A>.</DIV></DIV>
+<DIV id=ipbcopyright>Invision Power Board &copy; 2001-2009 Invision Power Services, 
+Inc.</DIV></BODY></HTML>

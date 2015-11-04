@@ -1,0 +1,18 @@
+SPAW Editor PHP Edition
+version 1.0.4
+Release Notes
+
+Thanks to everyone who downloaded, tried and supported SPAW Editor!
+
+This is basically a service release. No new features were added in this release,
+however some major and minor bugs fixed and 4 new languages added.
+
+Check out ChangeLog.txt for the list of new features and bugfixes.
+
+If you are fluent in any of languages that are now included and 
+see any typos or mistakes please report to spaw@solmetra.com
+
+Happy editing,
+Alan Mendelevich a.k.a. ailon
+alan@solmetra.com
+

@@ -1,0 +1,50 @@
+Recently i was trying to connect to a SQL Server 2005 Express database using PHP on a XP machine and i got the following error :
+
+mssql_connect() [function.mssql-connect]: Unable to connect to server…
+
+The 8 steps that i followed to resolve this error are as follows :
+
+1.) Downloaded ntwdblib.dll (version : 2000.80.194.0) from Webzila.com
+
+2.) Copied this dll file to apache\bin
+
+3.) Restarted the apache service by going to Control Panel->Administrative Tools->Services.
+
+4.) Went to “SQL Server Configuration Manager”.
+
+5.) Under “SQL Server Network Configuration” clicked on “Protocols for SQLExpress”.
+
+6.) On the right hand side,right clicked on “Named Pipes” and clicked on Enable
+
+7.) Also, right clicked on TCP/IP and clicked on enable
+
+8.) Restarted the SQL Server Express service. You can do that from the control panel or by issuing the following two commands at the command line :
+
+net stop mssql$sqlexpress
+
+net start mssql$sqlexpress
+
+That was it ! . I was now able to connect to SQL Server 2005 Express  .
+
+In case it still doesnt work for you try the following :
+
+1) Copy php_mssql.dll to apache\ext.
+
+2) Make sure that in your php.ini file , extension=php_mssql.dll is uncommented.
+
+3) Make sure you are using the right port number in your code. You can find out what port SQL Server is listening on by doing the following :
+
+3.1) Go to “SQl Server Configuration Manager”.
+
+3.2) Under “SQL Server Network Configuration” click on “Protocols for SQLExpress”.
+
+3.3) On the right hand side window, right click on TCP/IP , click on Properties.
+
+3.4) In the new window click on the “IP Addresses” tab
+
+3.5) The value of “TCP Dynamic ports” is the port number that SQL Server is listening on.
+
+I spent a hell lot of time figuring all this out, and i hope that this post saves you all that trouble.
+
+Happy Hacking !  
+

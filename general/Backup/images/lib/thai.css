@@ -1,0 +1,222 @@
+BODY {
+	MARGIN-TOP: 0px; FONT-SIZE: x-small; BACKGROUND: #ffffff; MARGIN-BOTTOM: 2px; COLOR: #003399; LINE-HEIGHT: 1.2em; PADDING-TOP: 0px; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+FONT {
+	FONT-SIZE: x-small; COLOR: #363636; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+P {
+	FONT-SIZE: x-small; COLOR: #363636; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+A {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+A:link {
+	FONT-WEIGHT: bold; COLOR: #fabc34; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; COLOR: #fabc34; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: bold; BACKGROUND: #fabc34; COLOR: #bd0c01
+}
+A.bold:link {
+	FONT-WEIGHT: bold; COLOR: #363636; TEXT-DECORATION: none
+}
+A.bold:visited {
+	FONT-WEIGHT: bold; COLOR: #363636; TEXT-DECORATION: none
+}
+A.bold:hover {
+	FONT-WEIGHT: bold; BACKGROUND: #fabc34; COLOR: #bd0c01; TEXT-DECORATION: none
+}
+A.data:link {
+	FONT-WEIGHT: bold; COLOR: #363636; TEXT-DECORATION: none
+}
+A.data:visited {
+	FONT-WEIGHT: bold; COLOR: #363636; TEXT-DECORATION: none
+}
+A.data:hover {
+	FONT-WEIGHT: bold; BACKGROUND: #fabc34; COLOR: #bd0c01; TEXT-DECORATION: none
+}
+H1 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H2 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H3 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H4 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H5 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H6 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H7 {
+	FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+H1 {
+	FONT-SIZE: xx-large
+}
+H2 {
+	FONT-SIZE: x-large
+}
+H3 {
+	FONT-SIZE: large
+}
+H4 {
+	FONT-SIZE: larger
+}
+H5 {
+	FONT-SIZE: medium
+}
+H6 {
+	FONT-SIZE: small
+}
+FORM {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+BUTTON {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+INPUT {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+FIELDSET {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+LEGEND {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+SELECT {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+OPTION {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+TEXTAREA {
+	FONT-SIZE: x-small; FONT-FAMILY: Tahoma, CordiaUPC, Krungthep, Thonburi, Ayutthya
+}
+BLINK {
+	TEXT-DECORATION: blink
+}
+STRONG {
+	FONT-WEIGHT: bold
+}
+B {
+	FONT-WEIGHT: bold
+}
+EM {
+	FONT-STYLE: italic
+}
+I {
+	FONT-STYLE: italic
+}
+U {
+	TEXT-DECORATION: underline
+}
+BIG {
+	FONT-SIZE: 115%
+}
+SMALL {
+	FONT-SIZE: 50%
+}
+SUB {
+	VERTICAL-ALIGN: sub
+}
+SUP {
+	VERTICAL-ALIGN: super
+}
+.initial {
+	TEXT-INDENT: 0px
+}
+.tab {
+	TEXT-INDENT: 5%
+}
+.red {
+	COLOR: #cb1814
+}
+.white {
+	COLOR: #ffffff
+}
+.lblue {
+	COLOR: #138eea
+}
+.blue {
+	COLOR: #003399
+}
+.old {
+	COLOR: gray; TEXT-DECORATION: line-through
+}
+TD.ROW_DEFAULT {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: top; COLOR: #006699; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffffff
+}
+TD.ROW_LINE {
+	BORDER-RIGHT: 1px dotted; BORDER-TOP: 1px dotted; FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: top; BORDER-LEFT: 1px dotted; COLOR: #006699; BORDER-BOTTOM: 1px dotted; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffffff
+}
+TD.ROW_HEAD {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; VERTICAL-ALIGN: middle; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #fabc34
+}
+TD.ROW_HEAD_REVERSE {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; VERTICAL-ALIGN: middle; COLOR: #bd0c01; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffffff
+}
+TD.ROW_TYPE1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #003399
+}
+TD.ROW_TYPE2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #3333cc
+}
+TD.ROW_TYPE3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; FONT-FAMILY: "Tahoma"
+}
+TD.ROW_TYPE4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #333399; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #66ff33
+}
+TD.ROW_TYPE5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #333399; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #66ffff
+}
+TD.ROW_TYPE6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ff33cc
+}
+TD.ROW_TYPE7 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #9966ff
+}
+TD.ROW_TYPE8 {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; COLOR: #333399; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffff00
+}
+TD.ROW_MENU {
+	FONT-WEIGHT: bold; FONT-SIZE: x-small; VERTICAL-ALIGN: middle; COLOR: #fabc34; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffffff
+}
+DIR {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+MENU {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+OL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+DL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; MARGIN-TOP: 5px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+LI {
+	FONT-SIZE: x-small; LINE-HEIGHT: 1.2em; FONT-FAMILY: "Tahoma"
+}
+DT {
+	FONT-WEIGHT: bold
+}
+UL LI.off {
+	LIST-STYLE-TYPE: none
+}
+OL LI.dec {
+	LIST-STYLE-TYPE: decimal
+}
+OL LI.rom {
+	LIST-STYLE-TYPE: upper-roman
+}

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<un:pbmstore xmlns:un="http://usablenet.com/namespaces/508as_results">
+  <un:pbmitem>
+    <un:ruleid>nspIMGwEquivalentALT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7075</un:offset1>
+    <un:offset2>7265</un:offset2>
+    <un:linenum>124</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>nspIMGneedsLongdesc</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7075</un:offset1>
+    <un:offset2>7265</un:offset2>
+    <un:linenum>124</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Non-spacer image may need a LONGDESC attribute.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SCRIPTwValidNOSCRIPT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>478</un:offset1>
+    <un:offset2>570</un:offset2>
+    <un:linenum>11</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Missing NOSCRIPT: There is no NOSCRIPT following the SCRIPT.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SCRIPTwValidNOSCRIPT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>572</un:offset1>
+    <un:offset2>668</un:offset2>
+    <un:linenum>12</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Missing NOSCRIPT: There is no NOSCRIPT following the SCRIPT.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SCRIPTwValidNOSCRIPT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>670</un:offset1>
+    <un:offset2>765</un:offset2>
+    <un:linenum>13</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Missing NOSCRIPT: There is no NOSCRIPT following the SCRIPT.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SCRIPTwValidNOSCRIPT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>767</un:offset1>
+    <un:offset2>1046</un:offset2>
+    <un:linenum>14</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Missing NOSCRIPT: There is no NOSCRIPT following the SCRIPT.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>SCRIPTwValidNOSCRIPT</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>1048</un:offset1>
+    <un:offset2>1813</un:offset2>
+    <un:linenum>26</un:linenum>
+    <un:status>FAILED</un:status>
+    <un:message>Missing NOSCRIPT: There is no NOSCRIPT following the SCRIPT.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>DontRelyOnColorAlone</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>33</un:offset1>
+    <un:offset2>13301</un:offset2>
+    <un:linenum>2</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ColorsAreVisible</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>33</un:offset1>
+    <un:offset2>13301</un:offset2>
+    <un:linenum>2</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2299</un:offset1>
+    <un:offset2>12819</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2443</un:offset1>
+    <un:offset2>2692</un:offset2>
+    <un:linenum>55</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2716</un:offset1>
+    <un:offset2>2918</un:offset2>
+    <un:linenum>59</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2942</un:offset1>
+    <un:offset2>4148</un:offset2>
+    <un:linenum>62</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>4172</un:offset1>
+    <un:offset2>5194</un:offset2>
+    <un:linenum>88</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>4586</un:offset1>
+    <un:offset2>5124</un:offset2>
+    <un:linenum>93</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>4753</un:offset1>
+    <un:offset2>4847</un:offset2>
+    <un:linenum>95</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>4989</un:offset1>
+    <un:offset2>5084</un:offset2>
+    <un:linenum>97</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>5218</un:offset1>
+    <un:offset2>5773</un:offset2>
+    <un:linenum>101</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>5797</un:offset1>
+    <un:offset2>6177</un:offset2>
+    <un:linenum>108</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>6201</un:offset1>
+    <un:offset2>6595</un:offset2>
+    <un:linenum>113</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>6619</un:offset1>
+    <un:offset2>7348</un:offset2>
+    <un:linenum>119</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7372</un:offset1>
+    <un:offset2>7793</un:offset2>
+    <un:linenum>127</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7793</un:offset1>
+    <un:offset2>8584</un:offset2>
+    <un:linenum>132</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>8608</un:offset1>
+    <un:offset2>9162</un:offset2>
+    <un:linenum>144</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>9186</un:offset1>
+    <un:offset2>10485</un:offset2>
+    <un:linenum>153</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>9595</un:offset1>
+    <un:offset2>10093</un:offset2>
+    <un:linenum>158</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>10160</un:offset1>
+    <un:offset2>10410</un:offset2>
+    <un:linenum>164</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>10509</un:offset1>
+    <un:offset2>11155</un:offset2>
+    <un:linenum>169</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>11179</un:offset1>
+    <un:offset2>11828</un:offset2>
+    <un:linenum>183</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>11852</un:offset1>
+    <un:offset2>12238</un:offset2>
+    <un:linenum>197</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>12238</un:offset1>
+    <un:offset2>12624</un:offset2>
+    <un:linenum>202</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>12624</un:offset1>
+    <un:offset2>12789</un:offset2>
+    <un:linenum>207</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>152</un:offset1>
+    <un:offset2>219</un:offset2>
+    <un:linenum>6</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>221</un:offset1>
+    <un:offset2>292</un:offset2>
+    <un:linenum>7</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>StyleSheetsNotNecessary</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>294</un:offset1>
+    <un:offset2>370</un:offset2>
+    <un:linenum>8</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page uses style sheets to present its content. Somebrowsers might be unable to understand style sheets, or theprovided style sheets may conflict with user-specified styleinformation.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>1815</un:offset1>
+    <un:offset2>13285</un:offset2>
+    <un:linenum>47</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>1939</un:offset1>
+    <un:offset2>13259</un:offset2>
+    <un:linenum>49</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2076</un:offset1>
+    <un:offset2>13223</un:offset2>
+    <un:linenum>51</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2299</un:offset1>
+    <un:offset2>12819</un:offset2>
+    <un:linenum>54</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>4494</un:offset1>
+    <un:offset2>5160</un:offset2>
+    <un:linenum>92</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TableWithHeaders</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>9489</un:offset1>
+    <un:offset2>10451</un:offset2>
+    <un:linenum>157</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains a table that might be used to present data.If this is the case, then the table must have headers forrows and columns (i.e., strings with TH tags).</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>TextOnlyEquivPage</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>478</un:offset1>
+    <un:offset2>570</un:offset2>
+    <un:linenum>11</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>5613</un:offset1>
+    <un:offset2>5739</un:offset2>
+    <un:linenum>106</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONCHANGE'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7075</un:offset1>
+    <un:offset2>7265</un:offset2>
+    <un:linenum>124</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'IMG' element has an event attribute ('ONCLICK'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>7075</un:offset1>
+    <un:offset2>7265</un:offset2>
+    <un:linenum>124</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'IMG' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>9712</un:offset1>
+    <un:offset2>9838</un:offset2>
+    <un:linenum>159</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONCLICK'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>10211</un:offset1>
+    <un:offset2>10336</un:offset2>
+    <un:linenum>164</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONCLICK'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>12845</un:offset1>
+    <un:offset2>12989</un:offset2>
+    <un:linenum>211</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONCLICK'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>12845</un:offset1>
+    <un:offset2>12989</un:offset2>
+    <un:linenum>211</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>AccessibleScripts</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>13040</un:offset1>
+    <un:offset2>13148</un:offset2>
+    <un:linenum>213</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The 'INPUT' element has an event attribute ('ONMOUSEOVER'): check its accessibility.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>FormIsAccessible</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>2210</un:offset1>
+    <un:offset2>13175</un:offset2>
+    <un:linenum>53</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>Make sure the linearized version of the form is still usable.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringGIFs</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>381</un:offset1>
+    <un:offset2>13292</un:offset2>
+    <un:linenum>10</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message>The page contains GIF images: Are they causing the screen toflicker? If so, please modify or remove the images.</un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>478</un:offset1>
+    <un:offset2>570</un:offset2>
+    <un:linenum>11</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>572</un:offset1>
+    <un:offset2>668</un:offset2>
+    <un:linenum>12</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>670</un:offset1>
+    <un:offset2>765</un:offset2>
+    <un:linenum>13</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>767</un:offset1>
+    <un:offset2>1046</un:offset2>
+    <un:linenum>14</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>NoFlickeringObjects</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>1048</un:offset1>
+    <un:offset2>1813</un:offset2>
+    <un:linenum>26</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClearLangForSite</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>381</un:offset1>
+    <un:offset2>13292</un:offset2>
+    <un:linenum>10</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+  <un:pbmitem>
+    <un:ruleid>ClarifyNatLangUsage</un:ruleid>
+    <un:fileurl>file://///Oas/PHPWWW/AMC/committee_add.php</un:fileurl>
+    <un:offset1>381</un:offset1>
+    <un:offset2>13292</un:offset2>
+    <un:linenum>10</un:linenum>
+    <un:status>MANUAL</un:status>
+    <un:message></un:message>
+  </un:pbmitem>
+</un:pbmstore>

@@ -1,0 +1,247 @@
+.txtmicrosoftsan10px{font-family: "Microsoft Sans Serif";; font-size: 10pt; font-style: normal; color:#000000;}
+.txtmicrosoftsan8px{font-family: "Microsoft Sans Serif";; font-size: 8pt; font-style: normal; color:#000000;}
+.txtmicrosoftsan8pxBlues{font-family: "Microsoft Sans Serif";; font-size: 8pt; font-style: normal; color:#00436E;}
+.txtmicrosoftsan8pxRed{font-family: "Microsoft Sans Serif";; font-size: 8pt; font-style: normal; color:#870F29;}
+.redhead {	color: #870F29;}
+.fontunder {font-family: Tahoma;font-size: 10px;color: #999999;}
+.txtblue {color: #00436E;}
+.txtgreen {color: #028E02;}
+
+a.link_seach {  COLOR: #2B2B2B;  TEXT-DECORATION: none}
+a.link_seach:visited {	COLOR: #2B2B2B; TEXT-DECORATION: none}
+a.link_seach:active {	COLOR: #2B2B2B;TEXT-DECORATION: none}
+a.link_seach:hover {	COLOR: #870F29; TEXT-DECORATION: underline}
+
+a.link_general {  COLOR: #870F29;  TEXT-DECORATION: none}
+a.link_general:visited {COLOR: #870F29; TEXT-DECORATION: none}
+a.link_general:active {COLOR: #870F29;TEXT-DECORATION: none}
+a.link_general:hover {COLOR: #028E02; TEXT-DECORATION: underline}
+
+a.link_orange {  COLOR: #FF7700;  TEXT-DECORATION: none}
+a.link_orange:visited {COLOR: #FF7700; TEXT-DECORATION: none}
+a.link_orange:active {COLOR: #FF7700;TEXT-DECORATION: none}
+a.link_orange:hover {COLOR: #FF7700; TEXT-DECORATION: underline}
+
+a.link_white {  COLOR: #FFFFFF;  TEXT-DECORATION: none}
+a.link_white:visited {COLOR: #FFFFFF; TEXT-DECORATION: none}
+a.link_white:active {COLOR: #FFFFFF;TEXT-DECORATION: none}
+a.link_white:hover {COLOR: #FFFFFF; TEXT-DECORATION: underline}
+
+a.link_bluesky {  COLOR: #2963D9;  TEXT-DECORATION: none}
+a.link_bluesky:visited {COLOR: #2963D9; TEXT-DECORATION: none}
+a.link_bluesky:active {COLOR: #2963D9;TEXT-DECORATION: none}
+a.link_bluesky:hover {COLOR: #2963D9; TEXT-DECORATION: underline}
+
+a.link_red {  COLOR: #FF0000;  TEXT-DECORATION: none}
+a.link_red:visited {COLOR: #FF0000; TEXT-DECORATION: none}
+a.link_red:active {COLOR: #FF0000;TEXT-DECORATION: none}
+a.link_red:hover {COLOR: #FF0000; TEXT-DECORATION: underline}
+
+a.link_baac {  COLOR: #000000;  TEXT-DECORATION: none}
+a.link_baac:visited {COLOR: #000000; TEXT-DECORATION: none}
+a.link_baac:active {COLOR: #000000;TEXT-DECORATION: none}
+a.link_baac:hover {COLOR: #870F29;TEXT-WEIGHT:none;font-weight: bold;}
+
+
+a.link_jouy{  COLOR: #000000; TEXT-DECORATION: none}
+a.link_jouy:visited {COLOR: #000000;TEXT-DECORATION: none}
+a.link_jouy:active {COLOR: #000000; TEXT-DECORATION: none}
+a.link_jouy:hover {COLOR: #EE6300; TEXT-DECORATION: none; TEXT-WEIGHT:none;font-weight: bold;}
+
+
+a.link_menu {  COLOR: #FFFFFF;  TEXT-DECORATION: none}
+a.link_menu:visited {	COLOR: #FFFFFF; TEXT-DECORATION: none}
+a.link_menu:active  {	COLOR: #FFFFFF;TEXT-DECORATION: none}
+a.link_menu:hover {	COLOR: #FFFFFF; TEXT-DECORATION: underline;}
+
+a.link_data {  COLOR: #000000;  TEXT-DECORATION: none}
+a.link_data:visited {	COLOR: #000000; TEXT-DECORATION: none}
+a.link_data:active  {	COLOR: #000000;TEXT-DECORATION: none}
+a.link_data:hover {	COLOR: #41781B; TEXT-DECORATION: underline}
+
+
+a.link_page {  COLOR: #000000;  TEXT-DECORATION: none}
+a.link_page:visited {	COLOR: #000000; TEXT-DECORATION: none}
+a.link_page:active {	COLOR: #000000;TEXT-DECORATION: none}
+a.link_page:hover {	COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.butn{BORDER-RIGHT: #5e5a47 1px inset; BORDER-TOP: #5e5a47 1px inset; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../images/butt_bg.gif); BORDER-LEFT: #5e5a47 1px inset; COLOR: #484534; BORDER-BOTTOM: #5e5a47 1px inset; BACKGROUND-REPEAT: repeat-x; FONT-STYLE: normal; FONT-FAMILY: "Microsoft Sans Serif"}.butn {
+	
+}
+.txtbronw {	color: #646464;}
+.txtorange {color: #FF9933;}
+.txtjouy{color:#FF7700;}
+.txtred{color:#FF0000;}
+.txtwhite{color: #FFFFFF;}
+.txtbluesky{color:#2963D9;}
+.tahoma11px{FONT-SIZE: 11px; COLOR: #2d3740; FONT-FAMILY: "Tahoma"}
+.txttahoma {font-family: tahoma;	font-size: 20px;}
+.margin5px{margin left:5px;}
+.left10px {
+	height: 10px;
+	width: 30px;
+
+
+}
+
+.boxleft50 {padding-left: 50px;}
+.boxleft30 {padding-left: 30px;}
+.boxright30 {padding-right: 30px;}
+.boxright15 {padding-right: 15px;}
+.boxleft15 {padding-left: 15px;}
+.boxleft10 {padding-left: 10px;}
+.boxleft5 {padding-left: 5px;}
+
+textbox {	padding: 1px;	height: 18px;	width: 150px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox100 {padding: 1px;	height: 18px;	width: 100px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox50 {padding: 1px;	height: 18px;	width: 50px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox30 {width: 100px;	}
+.textbox40 {width: 60px;}
+.textbox150 {padding: 1px;	height: 18px;	width: 150px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox300 {padding: 1px;	height: 18px;	width: 320px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox200 {padding: 1px;	height: 22px;	width: 223px;	border: 1px solid #D5D2C9;	margin: 1px;}
+
+.areabox80x200 {padding: 1px;	height: 50px;	width: 200px;	border: 1px solid #D5D2C9;	margin: 1px; font-family: "Microsoft Sans Serif";}
+.areabox130x300 {padding: 1px;	height: 130px;	width: 300px;	border: 1px solid #D5D2C9;	margin: 1px; font-family: "Microsoft Sans Serif";}
+.areabox150 {padding: 1px;	height: 50px;	width: 200px;	border: 1px solid #D5D2C9;	margin: 1px; font-family: "Microsoft Sans Serif";}
+.areabox330 {padding: 1px;	height: 116px;	width: 320px;	border: 1px solid #D5D2C9;	margin: 1px; font-family: "Microsoft Sans Serif";}
+.areabox50x400 {padding: 1px;	height: 50px;	width: 400px;	border: 1px solid #D5D2C9;	margin: 1px; font-family: "Microsoft Sans Serif";}
+.textbox400 {padding: 1px;	height: 19px;	width: 400px;	border: 1px solid #D5D2C9;	margin: 1px;}
+.textbox600 {padding: 1px;	height: 19px;	width: 625px;	border: 1px solid #D5D2C9;	margin: 1px;}
+
+.areabox400 {	padding: 1px;	height: 116px;	width: 400px;	border: 1px solid #D5D2C9;	margin: 1px;   font-family: "Microsoft Sans Serif";font-size: 10pt; font-style: normal; color:#000000;}
+.areabox400higt50{	padding: 1px;	height: 50px;	width: 400px;	border: 1px solid #D5D2C9;	margin: 1px;   font-family: "Microsoft Sans Serif";font-size: 10pt; font-style: normal; color:#000000;}
+.txtmicrosoftsan9px {
+	font-family: "Microsoft Sans Serif";
+	font-size: 9pt;
+}
+.buttonlogin {
+	font-family: Tahoma;
+	font-size: 8.5pt;
+	color: #000000;
+	height: 18px;
+	width: 120px;
+	border: none #FFFFFF;
+}
+
+.formButton {
+	BORDER-RIGHT: #52748e 1px solid; PADDING-RIGHT: 0.2em; BORDER-TOP: #52748e 1px solid; PADDING-LEFT: 0.2em; FONT-WEIGHT: bold; FONT-SIZE: 10px; FILTER: progid:DXImageTransform.Microsoft.Gradient
+      (GradientType=0,StartColorStr='#ffffff',EndColorStr='#90A8CD'); PADDING-BOTTOM: 0em; BORDER-LEFT: #52748e 1px solid; COLOR: #333333; PADDING-TOP: 0em; BORDER-BOTTOM: #52748e 1px solid; FONT-FAMILY: 'Arial',helvetica,sans-serif; HEIGHT: 18px; BACKGROUND-COLOR: #fed
+}
+.AssetType {
+	width: 80%;
+	background-color: #f0f0f0;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #666666;
+	border: 1px dotted #F0F0F0;
+
+
+}
+.Assetsearch {
+	width: 95%;
+	background-color: #FFFFFF;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	border: 1px dotted #F0F0F0;
+
+
+}
+
+.AssetType2 {
+	width: 80%;
+	background-color: #FFFFFF;
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #666666;
+	border: 1px solid #FFFFFF;
+
+}
+
+.AssetSize {
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #666666;
+	width: 95%;
+	border: 1px solid #cccccc;
+	float: none;
+	clear: none;
+
+
+
+}
+.AssetAmount {
+	font-family: Tahoma;
+	font-size: 8pt;
+	color: #666666;
+	width: 95%;
+	border: 1px solid #F0F0F0;
+	background-color: #F0F0F0;
+	background-position: center center;
+
+
+}
+.AssetRemark {
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #666666;
+	width: 98%;
+	border: 1px solid #FFFFFF;
+}
+.user_id {
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #666666;
+	width: 30px;
+	border: 1px solid #FFFFFF;
+}
+
+
+.font1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: "Tahoma"
+}
+.txtbox95per {
+	width: 98%;
+}
+.tabledot {
+	border: 1pt dotted #FFFFFF;
+}
+
+.inputtypePersonnel {
+	font-family: tohoma;
+	font-size: 8pt;
+	color: #000000;
+	height: 18px;
+	width: 170px;
+	border: 1px solid #CCCCCC;
+	clip:  rect(auto auto auto 5px);
+
+
+}
+.inputtypePersonel100 {
+	font-size: 8pt;
+	font-family: tahoma;
+	color: #000000;
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	height: 16px;
+
+
+}
+.boxright5px {
+	padding-right: 6px;
+}
+
+.inputtypePersonnel100px {
+	font-family: tohoma;
+	font-size: 8pt;
+	color: #000000;
+	height: 18px;
+	width: 133px;
+	border: 1px solid #CCCCCC;
+	clip:  rect(auto auto auto 5px);

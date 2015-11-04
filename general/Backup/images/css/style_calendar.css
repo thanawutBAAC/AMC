@@ -1,0 +1,48 @@
+.tablecal {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 12px; BACKGROUND: #999999; BORDER-LEFT: 0px; WIDTH: 180px; BORDER-BOTTOM: 0px; FONT-FAMILY: Tahoma; empty-cells: show
+}
+.cellcal {
+	FONT-WEIGHT: bold; BACKGROUND: #ffffff; TEXT-ALIGN: center
+}
+.title {
+	FONT-WEIGHT: bold; BACKGROUND: #cccccc; TEXT-ALIGN: center
+}
+.daynames {
+	BACKGROUND: #cccccc; TEXT-ALIGN: center
+}
+.footrow {
+	BACKGROUND: #cccccc; TEXT-ALIGN: center
+}
+.combo {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #ffffff; BORDER-LEFT: #999999 1px solid; WIDTH: 100px; CURSOR: hand; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Tahoma; TEXT-ALIGN: center
+}
+.emptyrow {
+	DISPLAY: none; BACKGROUND: #ffffff; TEXT-ALIGN: center
+}
+.day {
+	BACKGROUND: #ffffff; TEXT-ALIGN: center
+}
+.daydisabled {
+	BACKGROUND: #ff0000; TEXT-ALIGN: center
+}
+.daytoday {
+	BACKGROUND: #ffacac; TEXT-ALIGN: center
+}
+.dayweekend {
+	BACKGROUND: #d7ffac; TEXT-ALIGN: center
+}
+.active {
+	FONT-SIZE: 12px; BACKGROUND: #eeeeff; CURSOR: hand; FONT-FAMILY: Tahoma; TEXT-ALIGN: center
+}
+.hilite {
+	FONT-SIZE: 12px; BACKGROUND: #ffffcc; CURSOR: hand; FONT-FAMILY: Tahoma; TEXT-ALIGN: center
+}
+.selected {
+	FONT-SIZE: 12px; BACKGROUND: #eeeeee; CURSOR: hand; FONT-FAMILY: Tahoma; TEXT-ALIGN: center
+}
+
+
+a.link_white {  COLOR: #FFFFFF;  TEXT-DECORATION: none}
+a.link_white:visited {COLOR: #FFFFFF; TEXT-DECORATION: none}
+a.link_white:active {COLOR: #FFFFFF;TEXT-DECORATION: none}
+a.link_white:hover {COLOR: #FFFFFF; TEXT-DECORATION: underline}

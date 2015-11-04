@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>ทดสอบการเพิ่มข้อมูล คณะกรรมการ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+</head>
+
+<body>
+<?
+	include ("images/lib/ms_database.php");
+		$year=(date('Y')+543);
+		echo "ปีนี้คือปี ".$year.'<br><br>';
+		$year_1=$year-1;
+		$year_2=$year-2;
+		$year_3=$year-3;
+		$year_4=$year-4;
+	//	echo $year;
+		if($list_Committeeoccasion=="1" AND $list_CommitteeYear=="1") { $SendYear='1'; } 
+		if($list_Committeeoccasion=="1" AND $list_CommitteeYear=="2") { $SendYear='2'; } 
+		if($list_Committeeoccasion=="2" AND $list_CommitteeYear=="1") { $SendYear='3'; } 
+		if($list_Committeeoccasion=="2" AND $list_CommitteeYear=="2") { $SendYear='4'; } 
+
+		$sql="SELECT TOP 1 * FROM CommitteeGroup ORDER BY CommitteeGroup DESC";  // ค้นหา จำนวน วาระและปี ปัจจุบัน
+		$ex_sql=mssql_query($sql);
+		$numrows=mssql_num_rows($ex_sql);
+		$data=mssql_fetch_array($ex_sql);
+		echo $sql;
+	//	$SendYear='2';
+		echo 'ปีปัจจุบันของเครื่อง เซิฟเวอร์คือปี '.$year.'<br>';
+		echo 'ปีในระบบที่ดึงได้คือปี '.$data['1'].'<br>'; 
+		settype($data['CommitteeGroup'],"integer");
+		echo gettype($data['CommitteeGroup']).'<br>';
+		echo gettype($year).'<br>';
+
+		if($data['CommitteeGroup']==$year)
+				{
+						echo "aaa<br>";
+						if($data['Committeeoccasion'] =='1' AND $data['CommitteeYear'] =='1') { $AddYear="1"; $AddCommitteeoccasion="1"; $CommtteeYear="1";}
+						if($data['Committeeoccasion'] =='1' AND $data['CommitteeYear'] =='2') { $AddYear="2"; $AddCommitteeoccasion="1"; $CommtteeYear="2";}
+						if($data['Committeeoccasion'] =='2' AND $data['CommitteeYear'] =='1') { $AddYear="3"; $AddCommitteeoccasion="2"; $CommtteeYear="1";}
+						if($data['Committeeoccasion'] =='2' AND $data['CommitteeYear'] =='2') { $AddYear="4"; $AddCommitteeoccasion="2"; $CommtteeYear="2";}
+				}
+		if($data['CommitteeGroup']<$year)
+				{	
+						echo "bbb<br>";
+						if($data['Committeeoccasion'] =='1' AND $data['CommitteeYear'] =='1') { $AddYear="2"; $AddCommitteeoccasion="1"; $CommtteeYear="2";}
+						if($data['Committeeoccasion'] =='1' AND $data['CommitteeYear'] =='2') { $AddYear="3"; $AddCommitteeoccasion="2"; $CommtteeYear="1";}
+						if($data['Committeeoccasion'] =='2' AND $data['CommitteeYear'] =='1') { $AddYear="4"; $AddCommitteeoccasion="2"; $CommtteeYear="2";}
+						if($data['Committeeoccasion'] =='2' AND $data['CommitteeYear'] =='2') { $AddYear="1"; $AddCommitteeoccasion="1"; $CommtteeYear="1";}
+				}
+
+		echo 'addyear '.$AddYear.'<br>';
+		echo 'sendyear '.$SendYear.'<br>';
+			if($AddYear==$SendYear) // กรณีที่ วาระและปี ตรงกันกับที่ user คีย์ข้อมูลมา
+				{
+				//	$txt_user_id="1409800003520";
+					$amc="ก011834";
+						// เช็ค ID
+						$Ckid=" SELECT * FROM CommitteeDetail WHERE CommitteeID='$txt_user_id' ";
+						$exCkid=mssql_query($Ckid);
+						$numCkid=mssql_num_rows($exCkid);
+							if($numCkid=="0") //กรณีที่เป็น ไอดีใหม่
+								{ 
+
+									if($rdo_CommitteeSocial=="1")
+										{ $CommSocial=$txt_CommitteeSocial; }
+									if($rdo_CommitteeSocial=="0")
+										{ $CommSocial="ไม่มี"; }
+
+										$insert_detail=" INSERT INTO CommitteeDetail(CommitteeID,AMCCode,CommitteeName,CommitteeLastname, ";
+										$insert_detail.=" CommitteeBirhtday,CommitteeAddress,CommitteePhone,CommitteeAMC,CommitteeEdu,CommitteeSocial,CommitteeOccu,CommitteeOccuSecond, ";
+										$insert_detail.=" CommitteeRemark) VALUES ('$txt_user_id','$amc','$txt_name','$txt_lsname','$txt_birthday','$area_address', ";
+										$insert_detail.=" '$txt_phone', '$rdo_CommitteeAMC','$list_education','$CommSocial','$list_Occu','$list_Occusecond','$area_remark' )";
+
+										$insert_group=" INSERT INTO CommitteeGroup(AMCCode, CommitteeGroup, Committeeoccasion, CommitteeYear, CommitteeID,CommitteeType,CommitteeCategory) VALUES ";
+										$insert_group.=" ('$amc', '$year', '$AddCommitteeoccasion', '$AddYear', '$txt_user_id','$list_CommitteeType','$hdd_CommitteeCategory')";
+										echo $insert_detail.'<br>';
+										echo $insert_group.'<br>';
+										mssql_query($insert_detail);
+										mssql_query($insert_group);
+										echo '<script>alert("บันทึกข้อมูล '.$txt_name . $txt_lsname .' แล้ว");window.location.href = "#";</script>';
+								} // จบกรณีที่เป็น ไอดีใหม่
+
+
+							if($numCkid=="1") //กรณีที่มีไอดีซ้ำกันเกิดขึ้นในระบบ
+								{
+	
+									echo '<b><br><br>A => 2551<br></b>';
+									$Ckgroup= " SELECT *  ";
+									$Ckgroup.=" FROM CommitteeGroup ";
+									$Ckgroup.=" WHERE CommitteeID = '$txt_user_id' AND CommitteeGroup ='$year' ";
+									$exCkgroup=mssql_query($Ckgroup);
+									$numCkgroup=mssql_num_rows($exCkgroup);
+									echo $numCkgroup.'<br>';
+									echo $Ckgroup.'<br>';
+										if($numCkgroup=="0") //กรณีที่ไม่มีข้อมูลคณะกรรมการในกลุ่มปีนี้
+												{
+														$topgroup =" SELECT TOP 1* FROM CommitteeGroup WHERE AMCCode='$amc' ORDER BY CommitteeGroup DESC";
+														$extopgroup=mssql_query($topgroup);
+														echo $topgroup.'<br><br>';
+														$datatopgroup=mssql_fetch_array($extopgroup);
+														$Committeegroup=$datatopgroup['1'];
+														$Committeeoccasion=$datatopgroup['2'];
+														$Committeeyear=$datatopgroup['3'];
+														echo "Committeegroup = ".$Committeegroup.'<br>';
+														echo "Committeeoccasion = ".$Committeeoccasion.'<br>';
+														echo "Committeeyear = ".$Committeeyear.'<br>';
+
+														if(($Committeeoccasion=="2" AND $Committeeyear=="2") AND $Committeegroup < $year ) //กรณีที่ อยู่ในวาระที่ 2 ปีที่ 2 และ ปีน้อยกว่าปีปัจจุบัน กรณีจะเพิ่มข้อมูลในกลุ่มใหม่
+															{
+																	$Ckidgroup="SELECT * FROM CommitteeGroup WHERE CommitteeID='$txt_user_id' AND (CommitteeGroup='$year_1' OR CommitteeGroup='$year_2'  OR CommitteeGroup='$year_3' OR CommitteeGroup='$year_4' ) ORDER BY CommitteeGroup DESC";
+																	$exCkidgroup=mssql_query($Ckidgroup);
+																	$numCkidgroup=mssql_num_rows($exCkidgroup);
+																	echo $Ckidgroup.'<br>';
+																		if($numCkidgroup=="0") // เพิ่มข้อมูลได้เลย
+																			{
+																						$insert_group=" INSERT INTO CommitteeGroup(AMCCode, CommitteeGroup, Committeeoccasion, CommitteeYear, CommitteeID,CommitteeType,CommitteeCategory) VALUES ";
+																						$insert_group.=" ('$amc', '$year', '$AddCommitteeoccasion', '$AddYear', '$txt_user_id','$list_CommitteeType','$hdd_CommitteeCategory')";
+																						echo $insert_group;
+																						mssql_query($insert_group);
+																			}
+																		if($numCkidgroup>="1") // ไม่สามารถเพิ่มข้อมูลได้เนื่องจากมีข้อมูลย้อนหลังในชุดล่าสุด
+																			{
+																					echo '<script>alert("บันทึกข้อมูลไม่ได้ เนื่องจากปฏิบัติงานภายใน 4 ปีที่แล้ว");window.location.href = "committe_show.php";</script>';
+																			}
+															} //จบกรณี อยู่ในวาระที่ 2 ปีที่ 2
+
+
+														elseif(($Committeeoccasion=="1" AND $Committeeyear=="1") AND $Committeegroup ==$year) // กรณีที่อยู่ในวาระที่ 1 ปีที่ 1 และเป็นปีปัจจุบัน และจะเพิ่มข้อมูลในกลุ่มใหม่
+															{
+																	$Ckidgroup="SELECT * FROM CommitteeGroup WHERE CommitteeID='$txt_user_id' AND (CommitteeGroup='$year_1' OR CommitteeGroup='$year_2'  OR CommitteeGroup='$year_3' OR CommitteeGroup='$year_4' ) ORDER BY CommitteeGroup DESC";
+																	$exCkidgroup=mssql_query($Ckidgroup);
+																	$numCkidgroup=mssql_num_rows($exCkidgroup);
+																	echo $Ckidgroup.'<br>';
+																		if($numCkidgroup=="0") // เพิ่มข้อมูลได้เลย
+																			{
+																						$insert_group=" INSERT INTO CommitteeGroup(AMCCode, CommitteeGroup, Committeeoccasion, CommitteeYear, CommitteeID,CommitteeType,CommitteeCategory) VALUES ";
+																						$insert_group.=" ('$amc', '$year', '$AddCommitteeoccasion', '$AddYear', '$txt_user_id','$list_CommitteeType','$hdd_CommitteeCategory')";
+																						mssql_query($insert_group);
+																			}
+																		if($numCkidgroup>="1") // ไม่สามารถเพิ่มข้อมูลได้เนื่องจากมีข้อมูลย้อนหลังในชุดล่าสุด
+																			{
+																					echo '<script>alert("บันทึกข้อมูลไม่ได้ เนื่องจากมีข้อมูลในชุดที่แล้ว");window.location.href = "#";</script>';
+																			}
+															} //จบกรณี อยู่ในวาระที่ 1 ปีที่ 1
+
+														else
+															{
+																	$insert_group=" INSERT INTO CommitteeGroup(AMCCode, CommitteeGroup, Committeeoccasion, CommitteeYear, CommitteeID,CommitteeType,CommitteeCategory) VALUES ";
+																	$insert_group.=" ('$amc', '$year', '$AddCommitteeoccasion', '$AddYear', '$txt_user_id','$list_CommitteeType','$hdd_CommitteeCategory')";
+																	mssql_query($insert_group);
+															}
+
+												}
+
+
+										if($numCkgroup=="1") //กรณีที่มีข้อมูลคณะกรรมการในกลุ่มปีนี้แล้ว
+												{
+													echo '<script>alert("บันทึกข้อมูลไม่ได้ เนื่องจากมีข้อมูลในปีนี้แล้ว");window.location.href = "#";</script>';
+												}
+							
+								} // ของ $numCkid=="1"
+						
+
+				}// จบ การเช็ค ปีวาระที่ส่งมา ตรงกัน
+
+
+			else  //ถ้า วาระ / ปีที่ส่งมาไม่ตรงกัน
+				{
+					echo '<script>alert(" วาระ '.$list_Committeeoccasion.' / ปีที่ '.$list_CommitteeYear.' ไม่ตรงกับข้อมูลในระบบ");window.location.href = "#";</script>';
+				}
+
+?>
+</body>
+</html>

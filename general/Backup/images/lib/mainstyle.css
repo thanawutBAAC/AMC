@@ -1,0 +1,75 @@
+BODY {
+	FONT-SIZE: 8pt; MARGIN: 0px; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #366ab3; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #366ab3; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #366ab3; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; COLOR: #366ab3; TEXT-DECORATION: underline
+}
+SELECT {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: "Tahoma"
+}
+TABLE.style1 {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: 8pt; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: transparent
+}
+SPAN.head1 {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 8pt; PADDING-BOTTOM: 4px; BORDER-TOP-STYLE: none; PADDING-TOP: 4px; FONT-FAMILY: "Tahoma"; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: #f0f8ff; BORDER-BOTTOM-STYLE: none
+}
+SPAN.head2 {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 8pt; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; BORDER-TOP-STYLE: none; PADDING-TOP: 4px; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #f0f8ff; BORDER-BOTTOM-STYLE: none
+}
+TD.head3 {
+	BORDER-LEFT: #cccccc 1px solid; BACKGROUND-COLOR: #deefbf
+}
+TD.head4 {
+	BACKGROUND-COLOR: #f9f8f8
+
+}
+.font1bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; FONT-FAMILY: "Tahoma"
+}
+.font2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; FONT-FAMILY: "MS Sans Serif"
+}
+.input1 {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 0.1em; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 0.1em; FONT-WEIGHT: normal; FONT-SIZE: 8pt; PADDING-BOTTOM: 0.1em; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 0.1em; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: "Tahoma"; TEXT-ALIGN: center
+}
+.input2 {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; FONT-WEIGHT: normal; FONT-SIZE: 8pt; PADDING-BOTTOM: 0.1em; BORDER-TOP-STYLE: none; PADDING-TOP: 0.1em; FONT-FAMILY: "Tahoma"; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: transparent; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+.headshow1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #343434; FONT-FAMILY: "Tahoma"
+}
+.headshow2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #37618d; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: underline
+}
+
+#msviFooter1 {
+	BORDER-TOP: #5076c9 1px solid; FONT: 70% Tahoma, Helvetica
+}
+#msviFooter2 {
+	FONT: 70% Tahoma, Helvetica; BORDER-BOTTOM: #cccccc 1px solid
+}
+
+.fonts3 {
+	font-family: tahoma;
+	font-size: 10pt;
+	color: #FFFFFF;
+}
+
+a.link_white {  COLOR: #FFFFFF;  TEXT-DECORATION: none}
+a.link_white:visited {COLOR: #FFFFFF; TEXT-DECORATION: none}
+a.link_white:active {COLOR: #FFFFFF;TEXT-DECORATION: none}
+a.link_white:hover {COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.tohoma {
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #666666;
+}
